@@ -30,7 +30,7 @@ After this (step 2), we have reordered our data so that the participant informat
 
 **IMPORTANT:** Please note that some of the column names in the second select function may differ in your study and ours. If you used the guide  and used the exact column names we specify there, this will work. Otherwise, at the point labelled "YOU MAY NEED TO EDIT HERE DOWN", be sure to change any of the column names to represent any variables/columns you added or changed from the guide to create your study.
 
-```{r}
+```{r subset-data}
 subsetted_data <- cleaned_data %>% 
   select(-c( # step 1. remove unnecessary columns
     status,
@@ -53,7 +53,7 @@ subsetted_data <- cleaned_data %>%
     list, # YOU MAY NEED TO EDIT HERE DOWN; list is the column name for the list
     item, # column name for the item ID
     block, # column name for the block variable
-    sensiblity, # column name for the sensibility variable
+    sensibility, # column name for the sensibility variable
     type, # column name for the type of sentence variable
     direction, # column name for the direction of movement variable
     correct_response, # column name for the correct response on a given trial
@@ -61,31 +61,34 @@ subsetted_data <- cleaned_data %>%
   )
 ```
 
-Filter data
+# Filter data
 
-Next, we will filter the data. We will only keep observations from participants who finished the study, who consented to take part (as long as the option for consenting here is "Yes"), when the sender (or the screen name in lab.js is "sentence_screen"), only when a sensible sentence is being responded to (i.e. sensibility == "sensible"), and only when the sentence involves transfer (i.e. type == "transfer"). 
+Next, we will filter the data. We will only keep observations from participants who finished the study, who consented to take part (as long as the option for consenting here is "Yes"), when the sender (or the screen name in lab.js is "sentence_screen"), only when a sensible sentence is being responded to (i.e. sensibility == "sensible"), only when the sentence involves transfer (i.e. type == "transfer"), and only when the block is 1 or 2 (i.e. excluding the practice trials). 
 
 If we didn't filter out the nonsense sentences and those not involving transfer, then we would get results for data that we don't actually care about. Hopefully you also understand why we only want to keep data from people who finished the experiment and who gave their consent.
 
 **IMPORTANT:** Again, if any of your variable names or values change, please change the code here to represent what it is that you have in your data. For example, if you changed the name of the sentence screens to "sentences" then this should read `sender == "sentences"`.
 
-```{r}
+```{r filter-data}
 filtered_data <- subsetted_data %>% 
   filter(
     finished == TRUE,
     consent == "Yes",
     sender == "sentence_screen",
-    sensibility == "sensible"
+    sensibility == "sensible",
+    block %in% c(1, 2)
   )
 ```
 
-Make Variables
+# Make Variables
 
-Finally, we will make the conditions variable for our study. Here, we only care if the direction of movement in the sentence matches the correct response required for a sensible sentence on the keyboard. If it does, we give that the level "congruent". If these things don't match, we give that the condition "incongruent".
+Finally, we will make the conditions variable for our study. Here, we only care if the direction of movement in the sentence matches the correct response required for a sensible sentence on the keyboard. If it does, we give that the level "congruent". If these things don't match, we give that the condition "incongruent". For anything else (e.g. missing data), we set a default of "NA".
 
 Again, if your conditions and labels for the levels don't match that of the guide, then please adapt this code below to track those changes. (e.g. if you called  one of your directions "toward" instead of "towards", then change "towards" in all cases below to read "toward").
 
-```{r}
+Finally, we'll keep only trials which match the congruent and incongruent conditions.
+
+```{r make-variables}
 tidied_data <- filtered_data %>% 
   mutate(
     congruency = case_when(
@@ -95,14 +98,19 @@ tidied_data <- filtered_data %>%
       direction == "away" & correct_response == "s" ~ "incongruent",
       TRUE ~ "NA"
     )
-  )
+  ) %>% 
+  filter(congruency %in% c("congruent", "incongruent"))
 ```
+
+# Fixing Some Problems
+
+Lab.js apparently doesn't like it if we give variables the same names across the two phases of the study
 
 # Save Data
 
 Finally, we will save our data to the data folder under the name "tidied_data.csv".
 
-```{r}
+```{r save-tidied-data}
 write_csv(tidied_data, here("data", "tidied_data.csv"))
 ```
 

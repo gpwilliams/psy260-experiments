@@ -30,12 +30,13 @@ Here we will group our data by the participant (response_id) and their condition
 
 This is calculated by taking the sum of the TRUE/FALSE values in the correct column. However, we can't sum up Boolean (TRUE/FALSE) data, so we first make this numeric. In R, TRUE defaults to 1, and FALSE defaults to 0, so we essentially only sum up all of the correct responses (i.e. how many 1s did we find?).
 
-```{r}
+```{r make-accuracy-data, message = FALSE}
 accuracy_data <- tidied_data %>% 
+  drop_na(correct) %>% 
   group_by(response_id, congruency) %>% 
   summarise(
     n = n(),
-    mean_correct = sum(as.numeric(correct))
+    mean_correct = sum(correct)
   )
 ```
 
@@ -47,13 +48,14 @@ We will first only keep responses where they got the trial correct. After that, 
 
 We could be even smarter here by filtering out any trials where reaction times were exceptionally long. Imagine we want to remove reaction times that are at or greater than 2000ms (i.e. 2 seconds) long. To do this, just change the filter code to read `filter(correct == TRUE, duration < 2000)`
 
-```{r}
+```{r make-rt-data, message = FALSE}
 response_time_data <- tidied_data %>% 
-  filter(correct == TRUE) %>% 
+  filter(correct == 1) %>% 
+  drop_na(duration) %>% 
   group_by(response_id, congruency) %>% 
   summarise(
     n = n(),
-    mean_correct = mean(duration)
+    mean_rt = mean(duration)
   )
 ```
 
@@ -61,7 +63,7 @@ response_time_data <- tidied_data %>%
 
 Finally, we will save our two data sets separately in the data folder as accuracy_data.csv and response_time_data.csv. Our data is now ready for analysis using R, JASP, Jamovi, or even SPSS.
 
-```{r}
+```{r save-summaries}
 write_csv(accuracy_data, here("data", "accuracy_data.csv"))
 write_csv(response_time_data, here("data", "response_time_data.csv"))
 ```
