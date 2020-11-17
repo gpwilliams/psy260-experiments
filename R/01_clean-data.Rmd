@@ -1,0 +1,58 @@
+---
+title: "Clean Data"
+output: html_notebook
+---
+
+# Optionally Install Packages, Load Packages
+
+Below we will check whether you have the package called `pacman` installed on your computer. If not, we will install it. Then we will use that package to load the required packages to clean your data. These packages we will use are the tidyverse (for cleaning data),jsonlite (for unpacking lab.js data), janitor (for creating consistent column names), and here (for indexing your external data) packages.
+
+```{r packages}
+if(!require("pacman")) {install.packages("pacman")}
+pacman::p_load("tidyverse", "jsonlite", "janitor", "here")
+```
+
+# Load Data
+
+Ensure that your data is saved as a .csv file called "raw_data.csv" in the folder "data" at the root of this directory. If this is not the case, please rename your data file and put it in this folder. 
+
+We will then load the data from this folder as follows:
+
+```{r read-raw-data, message=FALSE}
+raw_data <- read_csv(here("data", "raw_data.csv"))
+```
+
+# Clean Data
+
+Next, we need to define where the .json data from lab.js lives in your data set. If you followed the step by step guide and renamed the embedded data to "labjs-data" in Qualtrics, this will work. 
+
+If not, please ensure that you change the string in the chunk below to whatever you named your embedded data to. Details of this are in step 32 of the step by step guide.
+
+```{r define-labjs-data-column}
+labjs_column <- "labjs-data"
+```
+
+We will now clean up our data by taking the raw data, removing the extra rows Qualtrics puts into it, then replacing any missing data from lab.js with a format R expects to see. After this, we will export the data from the labjs-data column. Again, if this doesn't work for you have passed the correct name for the column with your lab.js data in it in the code chunk above. 
+
+Next, we will tidy up our data by converting any data types to what R should expect (e.g. text = characters, numbers = numeric) and make sure the names are all consistent in their format.
+
+```{r unpack-and-clean-raw-data, message = FALSE}
+cleaned_data <- raw_data %>% 
+  slice(3:n()) %>% # remove the first 2 rows which Qualtrics introduces
+  # handle any missing data by making it an empty .json entry
+  mutate(!!labjs_column := recode(.[[labjs_column]], .missing="[{}]")) %>%
+  group_by_all() %>% # group the data by all variables
+  do(fromJSON(.[[labjs_column]], flatten=TRUE)) %>% # extract .json data from the variables
+  ungroup() %>% # remove grouping
+  select(-matches(labjs_column)) %>% # remove column containing raw JSON
+  type_convert() %>% # fix column data types
+  clean_names() # fix names so they are consistent
+```
+
+# Save Data
+
+Finally we will save our data back to the data folder, now under the name "cleaned_data.csv".
+
+```{r save-cleaned-data}
+write_csv(cleaned_data, here("data", "cleaned_data.csv"))
+```

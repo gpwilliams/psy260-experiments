@@ -1,0 +1,108 @@
+---
+title: "Filter Data"
+output: html_notebook
+---
+
+We will first install the pacman package if it is not already installed. This makes loading packages easier to do. Next, we will load the tidyverse and here packages for our data filtering.
+
+# Optionally Install Packages, Load Packages
+
+```{r load-packages}
+if(!require("pacman")) {install.packages("pacman")}
+pacman::p_load("tidyverse", "here")
+```
+
+# Load Data
+
+We will load up our cleaned data which we saved at the end of 01_clean-data.Rmd.
+
+```{r load-data, message = FALSE}
+cleaned_data <- read_csv(here("data", "cleaned_data.csv"))
+```
+
+# Subset Data
+
+Next, we will subset our data to get rid of any columns we don't want to keep. 
+
+At the beginning (step 1) we have removed the columns status, distribution_channel, user_language, and sender_id. These don't contain important information. We have also removed any columns containing the strings "recipient", "meta", "location", and "time". 
+
+After this (step 2), we have reordered our data so that the participant information comes first as this may be a bit easier to read.
+
+**IMPORTANT:** Please note that some of the column names in the second select function may differ in your study and ours. If you used the guide  and used the exact column names we specify there, this will work. Otherwise, at the point labelled "YOU MAY NEED TO EDIT HERE DOWN", be sure to change any of the column names to represent any variables/columns you added or changed from the guide to create your study.
+
+```{r}
+subsetted_data <- cleaned_data %>% 
+  select(-c( # step 1. remove unnecessary columns
+    status,
+    distribution_channel,
+    user_language,
+    sender_id,
+    contains("recipient"),
+    contains("meta"),
+    contains("location"),
+    contains("time")
+  )) %>% 
+  select( # step 2. reorder your data
+    response_id, 
+    consent,
+    start_date,
+    end_date,
+    recorded_date,
+    progress,
+    finished,
+    list, # YOU MAY NEED TO EDIT HERE DOWN; list is the column name for the list
+    item, # column name for the item ID
+    block, # column name for the block variable
+    sensiblity, # column name for the sensibility variable
+    type, # column name for the type of sentence variable
+    direction, # column name for the direction of movement variable
+    correct_response, # column name for the correct response on a given trial
+    everything()
+  )
+```
+
+Filter data
+
+Next, we will filter the data. We will only keep observations from participants who finished the study, who consented to take part (as long as the option for consenting here is "Yes"), when the sender (or the screen name in lab.js is "sentence_screen"), only when a sensible sentence is being responded to (i.e. sensibility == "sensible"), and only when the sentence involves transfer (i.e. type == "transfer"). 
+
+If we didn't filter out the nonsense sentences and those not involving transfer, then we would get results for data that we don't actually care about. Hopefully you also understand why we only want to keep data from people who finished the experiment and who gave their consent.
+
+**IMPORTANT:** Again, if any of your variable names or values change, please change the code here to represent what it is that you have in your data. For example, if you changed the name of the sentence screens to "sentences" then this should read `sender == "sentences"`.
+
+```{r}
+filtered_data <- subsetted_data %>% 
+  filter(
+    finished == TRUE,
+    consent == "Yes",
+    sender == "sentence_screen",
+    sensibility == "sensible"
+  )
+```
+
+Make Variables
+
+Finally, we will make the conditions variable for our study. Here, we only care if the direction of movement in the sentence matches the correct response required for a sensible sentence on the keyboard. If it does, we give that the level "congruent". If these things don't match, we give that the condition "incongruent".
+
+Again, if your conditions and labels for the levels don't match that of the guide, then please adapt this code below to track those changes. (e.g. if you called  one of your directions "toward" instead of "towards", then change "towards" in all cases below to read "toward").
+
+```{r}
+tidied_data <- filtered_data %>% 
+  mutate(
+    congruency = case_when(
+      direction == "towards" & correct_response == "w" ~ "incongruent",
+      direction == "towards" & correct_response == "s" ~ "congruent",
+      direction == "away" & correct_response == "w" ~ "congruent",
+      direction == "away" & correct_response == "s" ~ "incongruent",
+      TRUE ~ "NA"
+    )
+  )
+```
+
+# Save Data
+
+Finally, we will save our data to the data folder under the name "tidied_data.csv".
+
+```{r}
+write_csv(tidied_data, here("data", "tidied_data.csv"))
+```
+
