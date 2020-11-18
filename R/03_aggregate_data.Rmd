@@ -22,7 +22,7 @@ tidied_data <- read_csv(here("data", "tidied_data.csv"))
 
 # Make Data Aggregated by Participants
 
-We will make by-participant averages of some measures of performance in the study. To do this, we will take our data and group it by each participant (under the response_id column) and the condition they are in. Then we will make our averages for each participant.
+We will make by-participant averages of some measures of performance in the study. To do this, we will take our data and group it by each participant (under the response_id column) and the conditions they are in. Then we will make our averages for each participant.
 
 ## Accuracy Data
 
