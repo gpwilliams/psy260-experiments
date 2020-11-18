@@ -1,241 +1,401 @@
-list,item,block,sensibility,type,direction,text,correct_response
-1,21,2,sensible,transfer,towards,Leandra threw you a pen.,s
-1,22,2,sensible,transfer,away,You awarded a medal to Latesha.,s
-1,23,2,sensible,transfer,towards,Ian kicked you the soccer ball.,s
-1,24,2,sensible,transfer,away,You bought Kourtney ice cream.,s
-1,25,2,sensible,transfer,towards,Hae slid you the cafeteria tray.,s
-1,26,2,sensible,transfer,away,You handed Tanner the notebook.,s
-1,27,2,sensible,transfer,towards,Haseena dealt the cards to you.,s
-1,28,2,sensible,transfer,away,You forked over the cash to Wajdi,s
-1,29,2,sensible,transfer,towards,Konray donated money to you.,s
-1,30,2,sensible,transfer,away,You shot Shaimaaa the rubber band.,s
-1,31,2,sensible,transfer,towards,Blake poured you some water.,s
-1,32,2,sensible,transfer,away,You rolled Jennifer the marble.,s
-1,33,2,sensible,transfer,towards,Gregory slipped you a note.,s
-1,34,2,sensible,transfer,away,You kicked the football to Darian.,s
-1,35,2,sensible,transfer,towards,Luis entrusted the key to you.,s
-1,36,2,sensible,transfer,away,You delivered the pizza to Natalie.,s
-1,37,2,sensible,transfer,towards,Jasmine handed you the puppy.,s
-1,38,2,sensible,transfer,away,You drove the car to Rasheeda.,s
-1,39,2,sensible,transfer,towards,Calvin hit you the baseball.,s
-1,40,2,sensible,transfer,away,You dispensed the rations to Badruddeen.,s
-1,62,2,sensible,no_transfer,NA,You played cards with Joshua.,s
-1,64,2,sensible,no_transfer,NA,Andrew drank some water with you.,s
-1,66,2,sensible,no_transfer,NA,You read about donated money with Bertie.,s
-1,68,2,sensible,no_transfer,NA,You discuss the cash with Davidray.,s
-1,70,2,sensible,no_transfer,NA,You complained about Nolan.,s
-1,72,2,sensible,no_transfer,NA,Jannet ducked responsibility with you.,s
-1,74,2,sensible,no_transfer,NA,Jia read the story about you.,s
-1,76,2,sensible,no_transfer,NA,Madison watched football with you.,s
-1,78,2,sensible,no_transfer,NA,Olivia read the orders with you.,s
-1,80,2,sensible,no_transfer,NA,Ernesto wrote the note with you.,s
-1,141,2,nonsense,transfer,NA,Preston snored the frame with you.,w
-1,143,2,nonsense,transfer,NA,You fell the message to Dyanna.,w
-1,145,2,nonsense,transfer,NA,Shane choked the lesson with you.,w
-1,147,2,nonsense,transfer,NA,Tiffany wedged an homage to you.,w
-1,149,2,nonsense,transfer,NA,Ron paddled fairness to you.,w
-1,151,2,nonsense,transfer,NA,You radioed the floor with Crystal.,w
-1,153,2,nonsense,transfer,NA,Christopher ate the regards to you.,w
-1,155,2,nonsense,transfer,NA,You bled the rations to Adhraaa.,w
-1,157,2,nonsense,transfer,NA,You drank the baseball with Morgan.,w
-1,159,2,nonsense,transfer,NA,You sunk Angelo the monitor.,w
-1,161,2,nonsense,transfer,NA,You drank your idea to Ceara.,w
-1,163,2,nonsense,transfer,NA,You hanged honesty with Steven.,w
-1,165,2,nonsense,transfer,NA,Wasmaaa parted you the trailer.,w
-1,167,2,nonsense,transfer,NA,You danced the land to Dennis.,w
-1,169,2,nonsense,transfer,NA,Alexandria tasted the soccer ball to you.,w
-1,171,2,nonsense,transfer,NA,You smelled the song with Tahvia.,w
-1,173,2,nonsense,transfer,NA,Tyler locked the lint roller to you.,w
-1,175,2,nonsense,transfer,NA,Fawz joked the ice cream to you.,w
-1,177,2,nonsense,transfer,NA,You floundered the train to Katherine.,w
-1,179,2,nonsense,transfer,NA,You forked the bottle to Amanda.,w
-1,181,2,nonsense,transfer,NA,You licked the jacket to Latesha.,w
-1,183,2,nonsense,transfer,NA,Justin stapled the song with you.,w
-1,185,2,nonsense,transfer,NA,Michael tackled the cloud to you.,w
-1,187,2,nonsense,transfer,NA,Xandria pounded you the sunglasses.,w
-1,189,2,nonsense,transfer,NA,Maya matched the phone to you.,w
-1,191,2,nonsense,transfer,NA,You roasted Patricia the notion.,w
-1,193,2,nonsense,transfer,NA,You fertilized Kaylee advice.,w
-1,195,2,nonsense,transfer,NA,You blanketed Casey to the store.,w
-1,197,2,nonsense,transfer,NA,You tore Rachel the shoe.,w
-1,199,2,nonsense,transfer,NA,Jennifer recited the mouse for you.,w
-2,21,2,sensible,transfer,towards,Leandra threw you a pen.,w
-2,22,2,sensible,transfer,away,You awarded a medal to Latesha.,w
-2,23,2,sensible,transfer,towards,Ian kicked you the soccer ball.,w
-2,24,2,sensible,transfer,away,You bought Kourtney ice cream.,w
-2,25,2,sensible,transfer,towards,Hae slid you the cafeteria tray.,w
-2,26,2,sensible,transfer,away,You handed Tanner the notebook.,w
-2,27,2,sensible,transfer,towards,Haseena dealt the cards to you.,w
-2,28,2,sensible,transfer,away,You forked over the cash to Wajdi,w
-2,29,2,sensible,transfer,towards,Konray donated money to you.,w
-2,30,2,sensible,transfer,away,You shot Shaimaaa the rubber band.,w
-2,31,2,sensible,transfer,towards,Blake poured you some water.,w
-2,32,2,sensible,transfer,away,You rolled Jennifer the marble.,w
-2,33,2,sensible,transfer,towards,Gregory slipped you a note.,w
-2,34,2,sensible,transfer,away,You kicked the football to Darian.,w
-2,35,2,sensible,transfer,towards,Luis entrusted the key to you.,w
-2,36,2,sensible,transfer,away,You delivered the pizza to Natalie.,w
-2,37,2,sensible,transfer,towards,Jasmine handed you the puppy.,w
-2,38,2,sensible,transfer,away,You drove the car to Rasheeda.,w
-2,39,2,sensible,transfer,towards,Calvin hit you the baseball.,w
-2,40,2,sensible,transfer,away,You dispensed the rations to Badruddeen.,w
-2,62,2,sensible,no_transfer,NA,You played cards with Joshua.,w
-2,64,2,sensible,no_transfer,NA,Andrew drank some water with you.,w
-2,66,2,sensible,no_transfer,NA,You read about donated money with Bertie.,w
-2,68,2,sensible,no_transfer,NA,You discuss the cash with Davidray.,w
-2,70,2,sensible,no_transfer,NA,You complained about Nolan.,w
-2,72,2,sensible,no_transfer,NA,Jannet ducked responsibility with you.,w
-2,74,2,sensible,no_transfer,NA,Jia read the story about you.,w
-2,76,2,sensible,no_transfer,NA,Madison watched football with you.,w
-2,78,2,sensible,no_transfer,NA,Olivia read the orders with you.,w
-2,80,2,sensible,no_transfer,NA,Ernesto wrote the note with you.,w
-2,141,2,nonsense,transfer,NA,Preston snored the frame with you.,s
-2,143,2,nonsense,transfer,NA,You fell the message to Dyanna.,s
-2,145,2,nonsense,transfer,NA,Shane choked the lesson with you.,s
-2,147,2,nonsense,transfer,NA,Tiffany wedged an homage to you.,s
-2,149,2,nonsense,transfer,NA,Ron paddled fairness to you.,s
-2,151,2,nonsense,transfer,NA,You radioed the floor with Crystal.,s
-2,153,2,nonsense,transfer,NA,Christopher ate the regards to you.,s
-2,155,2,nonsense,transfer,NA,You bled the rations to Adhraaa.,s
-2,157,2,nonsense,transfer,NA,You drank the baseball with Morgan.,s
-2,159,2,nonsense,transfer,NA,You sunk Angelo the monitor.,s
-2,161,2,nonsense,transfer,NA,You drank your idea to Ceara.,s
-2,163,2,nonsense,transfer,NA,You hanged honesty with Steven.,s
-2,165,2,nonsense,transfer,NA,Wasmaaa parted you the trailer.,s
-2,167,2,nonsense,transfer,NA,You danced the land to Dennis.,s
-2,169,2,nonsense,transfer,NA,Alexandria tasted the soccer ball to you.,s
-2,171,2,nonsense,transfer,NA,You smelled the song with Tahvia.,s
-2,173,2,nonsense,transfer,NA,Tyler locked the lint roller to you.,s
-2,175,2,nonsense,transfer,NA,Fawz joked the ice cream to you.,s
-2,177,2,nonsense,transfer,NA,You floundered the train to Katherine.,s
-2,179,2,nonsense,transfer,NA,You forked the bottle to Amanda.,s
-2,181,2,nonsense,transfer,NA,You licked the jacket to Latesha.,s
-2,183,2,nonsense,transfer,NA,Justin stapled the song with you.,s
-2,185,2,nonsense,transfer,NA,Michael tackled the cloud to you.,s
-2,187,2,nonsense,transfer,NA,Xandria pounded you the sunglasses.,s
-2,189,2,nonsense,transfer,NA,Maya matched the phone to you.,s
-2,191,2,nonsense,transfer,NA,You roasted Patricia the notion.,s
-2,193,2,nonsense,transfer,NA,You fertilized Kaylee advice.,s
-2,195,2,nonsense,transfer,NA,You blanketed Casey to the store.,s
-2,197,2,nonsense,transfer,NA,You tore Rachel the shoe.,s
-2,199,2,nonsense,transfer,NA,Jennifer recited the mouse for you.,s
-3,1,2,sensible,transfer,towards,Nisma sold the land to you.,s
-3,2,2,sensible,transfer,away,You dedicated the song to Shelby.,s
-3,3,2,sensible,transfer,towards,Brandon sang you a song.,s
-3,4,2,sensible,transfer,away,You pitched Habeeba the idea.,s
-3,5,2,sensible,transfer,towards,Jesse paid tribute to you.,s
-3,6,2,sensible,transfer,away,You gave Dallas some writing tips.,s
-3,7,2,sensible,transfer,towards,Tanisha confessed a secret to you.,s
-3,8,2,sensible,transfer,away,You lavished Francisco with praise.,s
-3,9,2,sensible,transfer,towards,Esainea complained to you.,s
-3,10,2,sensible,transfer,away,You devoted your time to Jennifer.,s
-3,11,2,sensible,transfer,towards,Darius blew you a kiss.,s
-3,12,2,sensible,transfer,away,You transmitted the order to Alexander.,s
-3,13,2,sensible,transfer,towards,Jessica gave you another chance.,s
-3,14,2,sensible,transfer,away,You told Bryan the story.,s
-3,15,2,sensible,transfer,towards,Megan transferred responsibility to you.,s
-3,16,2,sensible,transfer,away,You sent Kaishon your regards.,s
-3,17,2,sensible,transfer,towards,Brandon gave you a piece of his mind.,s
-3,18,2,sensible,transfer,away,You bestowed the honor upon Ryan.,s
-3,19,2,sensible,transfer,towards,Keano radioed the message to you.,s
-3,20,2,sensible,transfer,away,You conveyed the message to Bianca.,s
-3,42,2,sensible,no_transfer,NA,Dina combed the puppy with you.,s
-3,44,2,sensible,no_transfer,NA,Dandrew felt honored to be with you.,s
-3,46,2,sensible,no_transfer,NA,Tyrin heard the radioed message with you.,s
-3,48,2,sensible,no_transfer,NA,Ivan listened to the message with you.,s
-3,50,2,sensible,no_transfer,NA,Jessica washed the car with you.,s
-3,52,2,sensible,no_transfer,NA,You bought the soccer ball with Kainos.,s
-3,54,2,sensible,no_transfer,NA,Jennifer thought about your idea.,s
-3,56,2,sensible,no_transfer,NA,Atsila watched the tribute with you.,s
-3,58,2,sensible,no_transfer,NA,You and Jordan discussed some writing tips.,s
-3,60,2,sensible,no_transfer,NA,Neeme looked at the land with you.,s
-3,81,2,nonsense,transfer,NA,You barked the football to Julia.,w
-3,83,2,nonsense,transfer,NA,You loafed the coffee cup to Ileana.,w
-3,85,2,nonsense,transfer,NA,You held the chance to Tareef.,w
-3,87,2,nonsense,transfer,NA,You flew on the note to Dietrich.,w
-3,89,2,nonsense,transfer,NA,Dongjoo rolled you adoration.,w
-3,91,2,nonsense,transfer,NA,You hoarded your love to Alexandra.,w
-3,93,2,nonsense,transfer,NA,You tasted the papers to Jerusalem.,w
-3,95,2,nonsense,transfer,NA,You swam Hop the truth.,w
-3,97,2,nonsense,transfer,NA,Ulambayar festered relief to you.,w
-3,99,2,nonsense,transfer,NA,Acacia washed you the thought.,w
-3,101,2,nonsense,transfer,NA,Steffen smiled the key to you.,w
-3,103,2,nonsense,transfer,NA,You parked the memo to Shayla.,w
-3,105,2,nonsense,transfer,NA,You sneezed Josiah secrets.,w
-3,107,2,nonsense,transfer,NA,Ryan tossed you with the paintball.,w
-3,109,2,nonsense,transfer,NA,Awda blanketed you the chance.,w
-3,111,2,nonsense,transfer,NA,You flexed Raabiya a moment.,w
-3,113,2,nonsense,transfer,NA,You sing the pizza to Mia.,w
-3,115,2,nonsense,transfer,NA,You snored justice for Kayla.,w
-3,117,2,nonsense,transfer,NA,You cleaned the pizza to Katherine.,w
-3,119,2,nonsense,transfer,NA,You mowed Valerie your opinion.,w
-3,121,2,nonsense,transfer,NA,Sharmayne mingled the complaint to you.,w
-3,123,2,nonsense,transfer,NA,You looted the blanket to Ilyaas.,w
-3,125,2,nonsense,transfer,NA,You cried the jack to Gregory.,w
-3,127,2,nonsense,transfer,NA,You built the water with Alazone.,w
-3,129,2,nonsense,transfer,NA,You smoked the cafeteria tray to Calvin.,w
-3,131,2,nonsense,transfer,NA,Haashim smelled the money to you.,w
-3,133,2,nonsense,transfer,NA,You painted the hammer to Mckenzy.,w
-3,135,2,nonsense,transfer,NA,Dillon ate you the poem.,w
-3,137,2,nonsense,transfer,NA,You drank the notebook to Thomas.,w
-3,139,2,nonsense,transfer,NA,Christopher boiled information to you.,w
-4,1,2,sensible,transfer,towards,Nisma sold the land to you.,w
-4,2,2,sensible,transfer,away,You dedicated the song to Shelby.,w
-4,3,2,sensible,transfer,towards,Brandon sang you a song.,w
-4,4,2,sensible,transfer,away,You pitched Habeeba the idea.,w
-4,5,2,sensible,transfer,towards,Jesse paid tribute to you.,w
-4,6,2,sensible,transfer,away,You gave Dallas some writing tips.,w
-4,7,2,sensible,transfer,towards,Tanisha confessed a secret to you.,w
-4,8,2,sensible,transfer,away,You lavished Francisco with praise.,w
-4,9,2,sensible,transfer,towards,Esainea complained to you.,w
-4,10,2,sensible,transfer,away,You devoted your time to Jennifer.,w
-4,11,2,sensible,transfer,towards,Darius blew you a kiss.,w
-4,12,2,sensible,transfer,away,You transmitted the order to Alexander.,w
-4,13,2,sensible,transfer,towards,Jessica gave you another chance.,w
-4,14,2,sensible,transfer,away,You told Bryan the story.,w
-4,15,2,sensible,transfer,towards,Megan transferred responsibility to you.,w
-4,16,2,sensible,transfer,away,You sent Kaishon your regards.,w
-4,17,2,sensible,transfer,towards,Brandon gave you a piece of his mind.,w
-4,18,2,sensible,transfer,away,You bestowed the honor upon Ryan.,w
-4,19,2,sensible,transfer,towards,Keano radioed the message to you.,w
-4,20,2,sensible,transfer,away,You conveyed the message to Bianca.,w
-4,42,2,sensible,no_transfer,NA,Dina combed the puppy with you.,w
-4,44,2,sensible,no_transfer,NA,Dandrew felt honored to be with you.,w
-4,46,2,sensible,no_transfer,NA,Tyrin heard the radioed message with you.,w
-4,48,2,sensible,no_transfer,NA,Ivan listened to the message with you.,w
-4,50,2,sensible,no_transfer,NA,Jessica washed the car with you.,w
-4,52,2,sensible,no_transfer,NA,You bought the soccer ball with Kainos.,w
-4,54,2,sensible,no_transfer,NA,Jennifer thought about your idea.,w
-4,56,2,sensible,no_transfer,NA,Atsila watched the tribute with you.,w
-4,58,2,sensible,no_transfer,NA,You and Jordan discussed some writing tips.,w
-4,60,2,sensible,no_transfer,NA,Neeme looked at the land with you.,w
-4,81,2,nonsense,transfer,NA,You barked the football to Julia.,s
-4,83,2,nonsense,transfer,NA,You loafed the coffee cup to Ileana.,s
-4,85,2,nonsense,transfer,NA,You held the chance to Tareef.,s
-4,87,2,nonsense,transfer,NA,You flew on the note to Dietrich.,s
-4,89,2,nonsense,transfer,NA,Dongjoo rolled you adoration.,s
-4,91,2,nonsense,transfer,NA,You hoarded your love to Alexandra.,s
-4,93,2,nonsense,transfer,NA,You tasted the papers to Jerusalem.,s
-4,95,2,nonsense,transfer,NA,You swam Hop the truth.,s
-4,97,2,nonsense,transfer,NA,Ulambayar festered relief to you.,s
-4,99,2,nonsense,transfer,NA,Acacia washed you the thought.,s
-4,101,2,nonsense,transfer,NA,Steffen smiled the key to you.,s
-4,103,2,nonsense,transfer,NA,You parked the memo to Shayla.,s
-4,105,2,nonsense,transfer,NA,You sneezed Josiah secrets.,s
-4,107,2,nonsense,transfer,NA,Ryan tossed you with the paintball.,s
-4,109,2,nonsense,transfer,NA,Awda blanketed you the chance.,s
-4,111,2,nonsense,transfer,NA,You flexed Raabiya a moment.,s
-4,113,2,nonsense,transfer,NA,You sing the pizza to Mia.,s
-4,115,2,nonsense,transfer,NA,You snored justice for Kayla.,s
-4,117,2,nonsense,transfer,NA,You cleaned the pizza to Katherine.,s
-4,119,2,nonsense,transfer,NA,You mowed Valerie your opinion.,s
-4,121,2,nonsense,transfer,NA,Sharmayne mingled the complaint to you.,s
-4,123,2,nonsense,transfer,NA,You looted the blanket to Ilyaas.,s
-4,125,2,nonsense,transfer,NA,You cried the jack to Gregory.,s
-4,127,2,nonsense,transfer,NA,You built the water with Alazone.,s
-4,129,2,nonsense,transfer,NA,You smoked the cafeteria tray to Calvin.,s
-4,131,2,nonsense,transfer,NA,Haashim smelled the money to you.,s
-4,133,2,nonsense,transfer,NA,You painted the hammer to Mckenzy.,s
-4,135,2,nonsense,transfer,NA,Dillon ate you the poem.,s
-4,137,2,nonsense,transfer,NA,You drank the notebook to Thomas.,s
-4,139,2,nonsense,transfer,NA,Christopher boiled information to you.,s
+list,block,phase,item,sensibility,concreteness,type,direction,sentence,correct_response
+1,2,exp,11,sensible,abstract,transfer,away,You blew Cory a kiss.,s
+1,2,exp,12,sensible,abstract,transfer,towards,Davis transmitted orders to you.,s
+1,2,exp,13,sensible,abstract,transfer,away,You gave Umaira another chance.,s
+1,2,exp,14,sensible,abstract,transfer,towards,Ghaamid told you the story.,s
+1,2,exp,15,sensible,abstract,transfer,away,You transferred responsibility to Sierra.,s
+1,2,exp,16,sensible,abstract,transfer,towards,Charles sent you regards.,s
+1,2,exp,17,sensible,abstract,transfer,away,You gave Daniel a piece of your mind.,s
+1,2,exp,18,sensible,abstract,transfer,towards,Spencer bestowed the honor upon you.,s
+1,2,exp,19,sensible,abstract,transfer,away,You radioed the message to Sheldon.,s
+1,2,exp,20,sensible,abstract,transfer,towards,Shaamila conveyed the message to you.,s
+1,2,exp,31,sensible,concrete,transfer,away,You poured Regan some water.,s
+1,2,exp,32,sensible,concrete,transfer,towards,Selena rolled you the marble.,s
+1,2,exp,33,sensible,concrete,transfer,away,You slipped Jesse-Reese a note.,s
+1,2,exp,34,sensible,concrete,transfer,towards,Timothy kicked the football to you.,s
+1,2,exp,35,sensible,concrete,transfer,away,You entrusted the key to Charles.,s
+1,2,exp,36,sensible,concrete,transfer,towards,Ummu Kulthoom delivered the pizza to you.,s
+1,2,exp,37,sensible,concrete,transfer,away,You handed the puppy to Leah.,s
+1,2,exp,38,sensible,concrete,transfer,towards,Gloria drove the car to you.,s
+1,2,exp,39,sensible,concrete,transfer,away,You hit Jason the baseball.,s
+1,2,exp,40,sensible,concrete,transfer,towards,Travis dispensed the rations to you.,s
+1,2,exp,61,sensible,concrete,no_transfer,NA,Juliette combed the puppy with you.,s
+1,2,exp,62,sensible,concrete,no_transfer,NA,Ronnica counted the rations with you.,s
+1,2,exp,63,sensible,concrete,no_transfer,NA,Erik played baseball with you.,s
+1,2,exp,64,sensible,concrete,no_transfer,NA,Kion washed the car with you.,s
+1,2,exp,65,sensible,concrete,no_transfer,NA,You bought the soccer ball with Deja.,s
+1,2,exp,66,sensible,concrete,no_transfer,NA,You ate ice cream with Tiauna.,s
+1,2,exp,67,sensible,concrete,no_transfer,NA,Carah looked for the pen with you.,s
+1,2,exp,68,sensible,concrete,no_transfer,NA,You cleaned the medal for Dominic.,s
+1,2,exp,69,sensible,concrete,no_transfer,NA,Tre looked at the land with you.,s
+1,2,exp,70,sensible,concrete,no_transfer,NA,You played cards with Erin.,s
+1,2,exp,71,sensible,concrete,no_transfer,NA,Anthony drank some water with you.,s
+1,2,exp,72,sensible,concrete,no_transfer,NA,Cassandra and you shared the notebook.,s
+1,2,exp,73,sensible,concrete,no_transfer,NA,You donated money with Trae.,s
+1,2,exp,74,sensible,concrete,no_transfer,NA,Patrick held the cafeteria tray with you.,s
+1,2,exp,75,sensible,concrete,no_transfer,NA,Angelica read the story about you.,s
+1,2,exp,76,sensible,concrete,no_transfer,NA,You found the key with Rudi.,s
+1,2,exp,77,sensible,concrete,no_transfer,NA,Esmeralda watched football with you.,s
+1,2,exp,78,sensible,concrete,no_transfer,NA,Amanda looked for the marble with you.,s
+1,2,exp,79,sensible,concrete,no_transfer,NA,Fikriyya watched people blow kisses with you.,s
+1,2,exp,80,sensible,concrete,no_transfer,NA,Silvia wrote the note with you.,s
+1,2,exp,141,nonsense,transfer,NA,NA,Son snored the frame with you.,w
+1,2,exp,142,nonsense,transfer,NA,NA,You bordered Ashlee the chain.,w
+1,2,exp,143,nonsense,transfer,NA,NA,You fell the message to Auriel.,w
+1,2,exp,144,nonsense,transfer,NA,NA,Taj flushed you the appeal.,w
+1,2,exp,145,nonsense,transfer,NA,NA,Gavrin choked the lesson with you.,w
+1,2,exp,146,nonsense,transfer,NA,NA,Devante jousted you the marker.,w
+1,2,exp,147,nonsense,transfer,NA,NA,Carlos wedged an homage to you.,w
+1,2,exp,148,nonsense,transfer,NA,NA,You retaliated Keegan the opportunity.,w
+1,2,exp,149,nonsense,transfer,NA,NA,Tammy paddled fairness to you.,w
+1,2,exp,150,nonsense,transfer,NA,NA,Raheema hanged you more time.,w
+1,2,exp,151,nonsense,transfer,NA,NA,You radioed the floor with Joseph.,w
+1,2,exp,152,nonsense,transfer,NA,NA,Mariah scratched the hat to you.,w
+1,2,exp,153,nonsense,transfer,NA,NA,Coriel ate the regards to you.,w
+1,2,exp,154,nonsense,transfer,NA,NA,You genuflected Mauricio orders.,w
+1,2,exp,155,nonsense,transfer,NA,NA,You bled the rations to Paige.,w
+1,2,exp,156,nonsense,transfer,NA,NA,You filed the box to Martell.,w
+1,2,exp,157,nonsense,transfer,NA,NA,You drank the baseball with Emily.,w
+1,2,exp,158,nonsense,transfer,NA,NA,You cleaned the puppy to Rashaa.,w
+1,2,exp,159,nonsense,transfer,NA,NA,You sunk Mu'hsina the monitor.,w
+1,2,exp,160,nonsense,transfer,NA,NA,You cooked Noella duties.,w
+1,2,exp,161,nonsense,transfer,NA,NA,You drank your idea to Sahla.,w
+1,2,exp,162,nonsense,transfer,NA,NA,Stephen trudged you the concept.,w
+1,2,exp,163,nonsense,transfer,NA,NA,You hanged honesty with Jennifer.,w
+1,2,exp,164,nonsense,transfer,NA,NA,You laughed the pen to Nicole.,w
+1,2,exp,165,nonsense,transfer,NA,NA,Scott parted you the trailer.,w
+1,2,exp,166,nonsense,transfer,NA,NA,Tchuen-Yi frowned the door for you.,w
+1,2,exp,167,nonsense,transfer,NA,NA,You danced the land to Vanna.,w
+1,2,exp,168,nonsense,transfer,NA,NA,Insaaf bit the message to you.,w
+1,2,exp,169,nonsense,transfer,NA,NA,Christopher tasted the soccer ball to you.,w
+1,2,exp,170,nonsense,transfer,NA,NA,Uqbah parked the string to you.,w
+1,2,exp,171,nonsense,transfer,NA,NA,You smelled the song with Joseph.,w
+1,2,exp,172,nonsense,transfer,NA,NA,Badr rehearsed the medal to you.,w
+1,2,exp,173,nonsense,transfer,NA,NA,Shayne locked the lint roller to you.,w
+1,2,exp,174,nonsense,transfer,NA,NA,You sunk Nuzha your viewpoint.,w
+1,2,exp,175,nonsense,transfer,NA,NA,Ariunzaya joked the ice cream to you.,w
+1,2,exp,176,nonsense,transfer,NA,NA,Dhaki drank the shovel with you.,w
+1,2,exp,177,nonsense,transfer,NA,NA,You floundered the train to Marcus.,w
+1,2,exp,178,nonsense,transfer,NA,NA,Bronzelle broke the writing tips on you.,w
+1,2,exp,179,nonsense,transfer,NA,NA,You forked the bottle to Tammy.,w
+1,2,exp,180,nonsense,transfer,NA,NA,Meara laundered the bench to you.,w
+1,2,exp,181,nonsense,transfer,NA,NA,You licked the jacket to Alonso.,w
+1,2,exp,182,nonsense,transfer,NA,NA,Adina bruised you the hamburger.,w
+1,2,exp,183,nonsense,transfer,NA,NA,Marguerite stapled the song with you.,w
+1,2,exp,184,nonsense,transfer,NA,NA,Matthew slept you responsibilities.,w
+1,2,exp,185,nonsense,transfer,NA,NA,Summer tackled the cloud to you.,w
+1,2,exp,186,nonsense,transfer,NA,NA,Jessica threw you the street.,w
+1,2,exp,187,nonsense,transfer,NA,NA,Kashus pounded you the sunglasses.,w
+1,2,exp,188,nonsense,transfer,NA,NA,You slid the tribute on Rafeeq.,w
+1,2,exp,189,nonsense,transfer,NA,NA,Eric matched the phone to you.,w
+1,2,exp,190,nonsense,transfer,NA,NA,You drank Yashira your regards.,w
+1,2,exp,191,nonsense,transfer,NA,NA,You roasted Edward the notion.,w
+1,2,exp,192,nonsense,transfer,NA,NA,Muaaid watered you a tribute.,w
+1,2,exp,193,nonsense,transfer,NA,NA,You fertilized Antonia advice.,w
+1,2,exp,194,nonsense,transfer,NA,NA,Carolina smelled the pencil to you.,w
+1,2,exp,195,nonsense,transfer,NA,NA,You blanketed Zakkary to the store.,w
+1,2,exp,196,nonsense,transfer,NA,NA,Tareef dances the cash to you.,w
+1,2,exp,197,nonsense,transfer,NA,NA,You tore Jesse the shoe.,w
+1,2,exp,198,nonsense,transfer,NA,NA,Katie sniffed the praise from you.,w
+1,2,exp,199,nonsense,transfer,NA,NA,Ariana recited the mouse for you.,w
+1,2,exp,200,nonsense,transfer,NA,NA,You shrugged Ariana the hard drive.,w
+2,2,exp,1,sensible,abstract,transfer,towards,Hakeema sold the land to you.,s
+2,2,exp,2,sensible,abstract,transfer,away,You dedicated the song to Brittany.,s
+2,2,exp,3,sensible,abstract,transfer,towards,Hoc sang you a song.,s
+2,2,exp,4,sensible,abstract,transfer,away,You pitched Stephanie the idea.,s
+2,2,exp,5,sensible,abstract,transfer,towards,Paul paid tribute to you.,s
+2,2,exp,6,sensible,abstract,transfer,away,You gave Naren some writing tips.,s
+2,2,exp,7,sensible,abstract,transfer,towards,Yushan confessed a secret to you.,s
+2,2,exp,8,sensible,abstract,transfer,away,You lavished Prem with praise.,s
+2,2,exp,9,sensible,abstract,transfer,towards,Catherine complained to you.,s
+2,2,exp,10,sensible,abstract,transfer,away,You devoted your time to Kimberly.,s
+2,2,exp,21,sensible,concrete,transfer,towards,J'Rita threw you a pen.,s
+2,2,exp,22,sensible,concrete,transfer,away,You awarded a medal to Maryum.,s
+2,2,exp,23,sensible,concrete,transfer,towards,Shenandoah kicked you the soccer ball.,s
+2,2,exp,24,sensible,concrete,transfer,away,You bought Maazina ice cream.,s
+2,2,exp,25,sensible,concrete,transfer,towards,Brittany slid you the cafeteria tray.,s
+2,2,exp,26,sensible,concrete,transfer,away,You handed Marcus the notebook.,s
+2,2,exp,27,sensible,concrete,transfer,towards,Chantelle dealt the cards to you.,s
+2,2,exp,28,sensible,concrete,transfer,away,You forked over the cash to Tyler,s
+2,2,exp,29,sensible,concrete,transfer,towards,Nathaniel donated money to you.,s
+2,2,exp,30,sensible,concrete,transfer,away,You shot Breanna the rubber band.,s
+2,2,exp,41,sensible,abstract,no_transfer,NA,Safiyya talked about pizza with you.,s
+2,2,exp,42,sensible,abstract,no_transfer,NA,You and Leobardo took the lesson.,s
+2,2,exp,43,sensible,abstract,no_transfer,NA,Carla felt honored to be with you.,s
+2,2,exp,44,sensible,abstract,no_transfer,NA,Brian heard the radioed message with you.,s
+2,2,exp,45,sensible,abstract,no_transfer,NA,Annette listened to the message with you.,s
+2,2,exp,46,sensible,abstract,no_transfer,NA,You and Shaafi regarded the problem.,s
+2,2,exp,47,sensible,abstract,no_transfer,NA,Alyssa sang the song with you.,s
+2,2,exp,48,sensible,abstract,no_transfer,NA,Haile thought about your idea.,s
+2,2,exp,49,sensible,abstract,no_transfer,NA,You and Brenna sang a song.,s
+2,2,exp,50,sensible,abstract,no_transfer,NA,Briana watched the tribute with you.,s
+2,2,exp,51,sensible,abstract,no_transfer,NA,You and Christopher discussed some writing tips.,s
+2,2,exp,52,sensible,abstract,no_transfer,NA,You discussed shooting rubber bands with Jesse.,s
+2,2,exp,53,sensible,abstract,no_transfer,NA,You and Daniel shared a secret.,s
+2,2,exp,54,sensible,abstract,no_transfer,NA,You discuss the cash with Damon.,s
+2,2,exp,55,sensible,abstract,no_transfer,NA,You heard the praise with Juan.,s
+2,2,exp,56,sensible,abstract,no_transfer,NA,You complained about Monet.,s
+2,2,exp,57,sensible,abstract,no_transfer,NA,Cody took a chance with you.,s
+2,2,exp,58,sensible,abstract,no_transfer,NA,Jessica ducked responsibility with you.,s
+2,2,exp,59,sensible,abstract,no_transfer,NA,You spent your time around Meaghan.,s
+2,2,exp,60,sensible,abstract,no_transfer,NA,Kabeer read the orders with you.,s
+2,2,exp,81,nonsense,transfer,NA,NA,You barked the football to Jasmine.,w
+2,2,exp,82,nonsense,transfer,NA,NA,You kissed the time to Patrick.,w
+2,2,exp,83,nonsense,transfer,NA,NA,You loafed the coffee cup to Charles.,w
+2,2,exp,84,nonsense,transfer,NA,NA,Andrew cleaned honor upon you.,w
+2,2,exp,85,nonsense,transfer,NA,NA,You held the chance to Derantae.,w
+2,2,exp,86,nonsense,transfer,NA,NA,You harpooned Rafeeq the sheet.,w
+2,2,exp,87,nonsense,transfer,NA,NA,You flew on the note to Jennifer.,w
+2,2,exp,88,nonsense,transfer,NA,NA,Abdur Razzaaq pickled praise on you.,w
+2,2,exp,89,nonsense,transfer,NA,NA,Miguel rolled you adoration.,w
+2,2,exp,90,nonsense,transfer,NA,NA,You perfumed Jose accolades.,w
+2,2,exp,91,nonsense,transfer,NA,NA,You hoarded your love to Prakhar.,w
+2,2,exp,92,nonsense,transfer,NA,NA,You heated Sarah the blame.,w
+2,2,exp,93,nonsense,transfer,NA,NA,You tasted the papers to Michael.,w
+2,2,exp,94,nonsense,transfer,NA,NA,You tickled the orders with Kaitlin.,w
+2,2,exp,95,nonsense,transfer,NA,NA,You swam David the truth.,w
+2,2,exp,96,nonsense,transfer,NA,NA,You blew a car to Breanna.,w
+2,2,exp,97,nonsense,transfer,NA,NA,James festered relief to you.,w
+2,2,exp,98,nonsense,transfer,NA,NA,You glued the story with Deloria.,w
+2,2,exp,99,nonsense,transfer,NA,NA,Nicole washed you the thought.,w
+2,2,exp,100,nonsense,transfer,NA,NA,Maisara medicated commands to you.,w
+2,2,exp,101,nonsense,transfer,NA,NA,Jessica smiled the key to you.,w
+2,2,exp,102,nonsense,transfer,NA,NA,Spencer faltered the obligations to you.,w
+2,2,exp,103,nonsense,transfer,NA,NA,You parked the memo to Mallorie.,w
+2,2,exp,104,nonsense,transfer,NA,NA,You sang the marble with Aseel.,w
+2,2,exp,105,nonsense,transfer,NA,NA,You sneezed Nora secrets.,w
+2,2,exp,106,nonsense,transfer,NA,NA,You cleaned responsibility with Ladaisha.,w
+2,2,exp,107,nonsense,transfer,NA,NA,Brandon tossed you with the paintball.,w
+2,2,exp,108,nonsense,transfer,NA,NA,Michael shambled you loyalty.,w
+2,2,exp,109,nonsense,transfer,NA,NA,Cindy blanketed you the chance.,w
+2,2,exp,110,nonsense,transfer,NA,NA,Caitlin posted you the flowers.,w
+2,2,exp,111,nonsense,transfer,NA,NA,You flexed Alexandra a moment.,w
+2,2,exp,112,nonsense,transfer,NA,NA,You cleaned the honor for Kevin.,w
+2,2,exp,113,nonsense,transfer,NA,NA,You sing the pizza to Fuad.,w
+2,2,exp,114,nonsense,transfer,NA,NA,You ingested the car with Jana.,w
+2,2,exp,115,nonsense,transfer,NA,NA,You snored justice for Jasmine.,w
+2,2,exp,116,nonsense,transfer,NA,NA,You carpeted directions to Sunsiarae.,w
+2,2,exp,117,nonsense,transfer,NA,NA,You cleaned the pizza to Ashley.,w
+2,2,exp,118,nonsense,transfer,NA,NA,You gargled integrity to Rajab.,w
+2,2,exp,119,nonsense,transfer,NA,NA,You mowed Emily your opinion.,w
+2,2,exp,120,nonsense,transfer,NA,NA,Madeline ingested you instructions.,w
+2,2,exp,121,nonsense,transfer,NA,NA,Rasheeqa mingled the complaint to you.,w
+2,2,exp,122,nonsense,transfer,NA,NA,Matthew flew the house with you.,w
+2,2,exp,123,nonsense,transfer,NA,NA,You looted the blanket to Venessa.,w
+2,2,exp,124,nonsense,transfer,NA,NA,Anna droned you the pretzel.,w
+2,2,exp,125,nonsense,transfer,NA,NA,You cried the jack to Ethan.,w
+2,2,exp,126,nonsense,transfer,NA,NA,You harvested Ameri your idea.,w
+2,2,exp,127,nonsense,transfer,NA,NA,You built the water with Ghaaliya.,w
+2,2,exp,128,nonsense,transfer,NA,NA,You swam Brandon the truth.,w
+2,2,exp,129,nonsense,transfer,NA,NA,You smoked the cafeteria tray to Taylor.,w
+2,2,exp,130,nonsense,transfer,NA,NA,Tsehaye pickled the secret to you.,w
+2,2,exp,131,nonsense,transfer,NA,NA,Aabid smelled the money to you.,w
+2,2,exp,132,nonsense,transfer,NA,NA,You pocketed the bike to Ijhanea.,w
+2,2,exp,133,nonsense,transfer,NA,NA,You painted the hammer to Naasiruddeen.,w
+2,2,exp,134,nonsense,transfer,NA,NA,Shane swam the cards with you.,w
+2,2,exp,135,nonsense,transfer,NA,NA,Sundus ate you the poem.,w
+2,2,exp,136,nonsense,transfer,NA,NA,You dove the rubber band with Antquant.,w
+2,2,exp,137,nonsense,transfer,NA,NA,You drank the notebook to Christopher.,w
+2,2,exp,138,nonsense,transfer,NA,NA,You boxed Brandon the keyboard.,w
+2,2,exp,139,nonsense,transfer,NA,NA,Ronnie boiled information to you.,w
+2,2,exp,140,nonsense,transfer,NA,NA,You sang the computer with Wyatt.,w
+3,2,exp,11,sensible,abstract,transfer,away,You blew Cory a kiss.,w
+3,2,exp,12,sensible,abstract,transfer,towards,Davis transmitted orders to you.,w
+3,2,exp,13,sensible,abstract,transfer,away,You gave Umaira another chance.,w
+3,2,exp,14,sensible,abstract,transfer,towards,Ghaamid told you the story.,w
+3,2,exp,15,sensible,abstract,transfer,away,You transferred responsibility to Sierra.,w
+3,2,exp,16,sensible,abstract,transfer,towards,Charles sent you regards.,w
+3,2,exp,17,sensible,abstract,transfer,away,You gave Daniel a piece of your mind.,w
+3,2,exp,18,sensible,abstract,transfer,towards,Spencer bestowed the honor upon you.,w
+3,2,exp,19,sensible,abstract,transfer,away,You radioed the message to Sheldon.,w
+3,2,exp,20,sensible,abstract,transfer,towards,Shaamila conveyed the message to you.,w
+3,2,exp,31,sensible,concrete,transfer,away,You poured Regan some water.,w
+3,2,exp,32,sensible,concrete,transfer,towards,Selena rolled you the marble.,w
+3,2,exp,33,sensible,concrete,transfer,away,You slipped Jesse-Reese a note.,w
+3,2,exp,34,sensible,concrete,transfer,towards,Timothy kicked the football to you.,w
+3,2,exp,35,sensible,concrete,transfer,away,You entrusted the key to Charles.,w
+3,2,exp,36,sensible,concrete,transfer,towards,Ummu Kulthoom delivered the pizza to you.,w
+3,2,exp,37,sensible,concrete,transfer,away,You handed the puppy to Leah.,w
+3,2,exp,38,sensible,concrete,transfer,towards,Gloria drove the car to you.,w
+3,2,exp,39,sensible,concrete,transfer,away,You hit Jason the baseball.,w
+3,2,exp,40,sensible,concrete,transfer,towards,Travis dispensed the rations to you.,w
+3,2,exp,61,sensible,concrete,no_transfer,NA,Juliette combed the puppy with you.,w
+3,2,exp,62,sensible,concrete,no_transfer,NA,Ronnica counted the rations with you.,w
+3,2,exp,63,sensible,concrete,no_transfer,NA,Erik played baseball with you.,w
+3,2,exp,64,sensible,concrete,no_transfer,NA,Kion washed the car with you.,w
+3,2,exp,65,sensible,concrete,no_transfer,NA,You bought the soccer ball with Deja.,w
+3,2,exp,66,sensible,concrete,no_transfer,NA,You ate ice cream with Tiauna.,w
+3,2,exp,67,sensible,concrete,no_transfer,NA,Carah looked for the pen with you.,w
+3,2,exp,68,sensible,concrete,no_transfer,NA,You cleaned the medal for Dominic.,w
+3,2,exp,69,sensible,concrete,no_transfer,NA,Tre looked at the land with you.,w
+3,2,exp,70,sensible,concrete,no_transfer,NA,You played cards with Erin.,w
+3,2,exp,71,sensible,concrete,no_transfer,NA,Anthony drank some water with you.,w
+3,2,exp,72,sensible,concrete,no_transfer,NA,Cassandra and you shared the notebook.,w
+3,2,exp,73,sensible,concrete,no_transfer,NA,You donated money with Trae.,w
+3,2,exp,74,sensible,concrete,no_transfer,NA,Patrick held the cafeteria tray with you.,w
+3,2,exp,75,sensible,concrete,no_transfer,NA,Angelica read the story about you.,w
+3,2,exp,76,sensible,concrete,no_transfer,NA,You found the key with Rudi.,w
+3,2,exp,77,sensible,concrete,no_transfer,NA,Esmeralda watched football with you.,w
+3,2,exp,78,sensible,concrete,no_transfer,NA,Amanda looked for the marble with you.,w
+3,2,exp,79,sensible,concrete,no_transfer,NA,Fikriyya watched people blow kisses with you.,w
+3,2,exp,80,sensible,concrete,no_transfer,NA,Silvia wrote the note with you.,w
+3,2,exp,141,nonsense,transfer,NA,NA,Son snored the frame with you.,s
+3,2,exp,142,nonsense,transfer,NA,NA,You bordered Ashlee the chain.,s
+3,2,exp,143,nonsense,transfer,NA,NA,You fell the message to Auriel.,s
+3,2,exp,144,nonsense,transfer,NA,NA,Taj flushed you the appeal.,s
+3,2,exp,145,nonsense,transfer,NA,NA,Gavrin choked the lesson with you.,s
+3,2,exp,146,nonsense,transfer,NA,NA,Devante jousted you the marker.,s
+3,2,exp,147,nonsense,transfer,NA,NA,Carlos wedged an homage to you.,s
+3,2,exp,148,nonsense,transfer,NA,NA,You retaliated Keegan the opportunity.,s
+3,2,exp,149,nonsense,transfer,NA,NA,Tammy paddled fairness to you.,s
+3,2,exp,150,nonsense,transfer,NA,NA,Raheema hanged you more time.,s
+3,2,exp,151,nonsense,transfer,NA,NA,You radioed the floor with Joseph.,s
+3,2,exp,152,nonsense,transfer,NA,NA,Mariah scratched the hat to you.,s
+3,2,exp,153,nonsense,transfer,NA,NA,Coriel ate the regards to you.,s
+3,2,exp,154,nonsense,transfer,NA,NA,You genuflected Mauricio orders.,s
+3,2,exp,155,nonsense,transfer,NA,NA,You bled the rations to Paige.,s
+3,2,exp,156,nonsense,transfer,NA,NA,You filed the box to Martell.,s
+3,2,exp,157,nonsense,transfer,NA,NA,You drank the baseball with Emily.,s
+3,2,exp,158,nonsense,transfer,NA,NA,You cleaned the puppy to Rashaa.,s
+3,2,exp,159,nonsense,transfer,NA,NA,You sunk Mu'hsina the monitor.,s
+3,2,exp,160,nonsense,transfer,NA,NA,You cooked Noella duties.,s
+3,2,exp,161,nonsense,transfer,NA,NA,You drank your idea to Sahla.,s
+3,2,exp,162,nonsense,transfer,NA,NA,Stephen trudged you the concept.,s
+3,2,exp,163,nonsense,transfer,NA,NA,You hanged honesty with Jennifer.,s
+3,2,exp,164,nonsense,transfer,NA,NA,You laughed the pen to Nicole.,s
+3,2,exp,165,nonsense,transfer,NA,NA,Scott parted you the trailer.,s
+3,2,exp,166,nonsense,transfer,NA,NA,Tchuen-Yi frowned the door for you.,s
+3,2,exp,167,nonsense,transfer,NA,NA,You danced the land to Vanna.,s
+3,2,exp,168,nonsense,transfer,NA,NA,Insaaf bit the message to you.,s
+3,2,exp,169,nonsense,transfer,NA,NA,Christopher tasted the soccer ball to you.,s
+3,2,exp,170,nonsense,transfer,NA,NA,Uqbah parked the string to you.,s
+3,2,exp,171,nonsense,transfer,NA,NA,You smelled the song with Joseph.,s
+3,2,exp,172,nonsense,transfer,NA,NA,Badr rehearsed the medal to you.,s
+3,2,exp,173,nonsense,transfer,NA,NA,Shayne locked the lint roller to you.,s
+3,2,exp,174,nonsense,transfer,NA,NA,You sunk Nuzha your viewpoint.,s
+3,2,exp,175,nonsense,transfer,NA,NA,Ariunzaya joked the ice cream to you.,s
+3,2,exp,176,nonsense,transfer,NA,NA,Dhaki drank the shovel with you.,s
+3,2,exp,177,nonsense,transfer,NA,NA,You floundered the train to Marcus.,s
+3,2,exp,178,nonsense,transfer,NA,NA,Bronzelle broke the writing tips on you.,s
+3,2,exp,179,nonsense,transfer,NA,NA,You forked the bottle to Tammy.,s
+3,2,exp,180,nonsense,transfer,NA,NA,Meara laundered the bench to you.,s
+3,2,exp,181,nonsense,transfer,NA,NA,You licked the jacket to Alonso.,s
+3,2,exp,182,nonsense,transfer,NA,NA,Adina bruised you the hamburger.,s
+3,2,exp,183,nonsense,transfer,NA,NA,Marguerite stapled the song with you.,s
+3,2,exp,184,nonsense,transfer,NA,NA,Matthew slept you responsibilities.,s
+3,2,exp,185,nonsense,transfer,NA,NA,Summer tackled the cloud to you.,s
+3,2,exp,186,nonsense,transfer,NA,NA,Jessica threw you the street.,s
+3,2,exp,187,nonsense,transfer,NA,NA,Kashus pounded you the sunglasses.,s
+3,2,exp,188,nonsense,transfer,NA,NA,You slid the tribute on Rafeeq.,s
+3,2,exp,189,nonsense,transfer,NA,NA,Eric matched the phone to you.,s
+3,2,exp,190,nonsense,transfer,NA,NA,You drank Yashira your regards.,s
+3,2,exp,191,nonsense,transfer,NA,NA,You roasted Edward the notion.,s
+3,2,exp,192,nonsense,transfer,NA,NA,Muaaid watered you a tribute.,s
+3,2,exp,193,nonsense,transfer,NA,NA,You fertilized Antonia advice.,s
+3,2,exp,194,nonsense,transfer,NA,NA,Carolina smelled the pencil to you.,s
+3,2,exp,195,nonsense,transfer,NA,NA,You blanketed Zakkary to the store.,s
+3,2,exp,196,nonsense,transfer,NA,NA,Tareef dances the cash to you.,s
+3,2,exp,197,nonsense,transfer,NA,NA,You tore Jesse the shoe.,s
+3,2,exp,198,nonsense,transfer,NA,NA,Katie sniffed the praise from you.,s
+3,2,exp,199,nonsense,transfer,NA,NA,Ariana recited the mouse for you.,s
+3,2,exp,200,nonsense,transfer,NA,NA,You shrugged Ariana the hard drive.,s
+4,2,exp,1,sensible,abstract,transfer,towards,Hakeema sold the land to you.,w
+4,2,exp,2,sensible,abstract,transfer,away,You dedicated the song to Brittany.,w
+4,2,exp,3,sensible,abstract,transfer,towards,Hoc sang you a song.,w
+4,2,exp,4,sensible,abstract,transfer,away,You pitched Stephanie the idea.,w
+4,2,exp,5,sensible,abstract,transfer,towards,Paul paid tribute to you.,w
+4,2,exp,6,sensible,abstract,transfer,away,You gave Naren some writing tips.,w
+4,2,exp,7,sensible,abstract,transfer,towards,Yushan confessed a secret to you.,w
+4,2,exp,8,sensible,abstract,transfer,away,You lavished Prem with praise.,w
+4,2,exp,9,sensible,abstract,transfer,towards,Catherine complained to you.,w
+4,2,exp,10,sensible,abstract,transfer,away,You devoted your time to Kimberly.,w
+4,2,exp,21,sensible,concrete,transfer,towards,J'Rita threw you a pen.,w
+4,2,exp,22,sensible,concrete,transfer,away,You awarded a medal to Maryum.,w
+4,2,exp,23,sensible,concrete,transfer,towards,Shenandoah kicked you the soccer ball.,w
+4,2,exp,24,sensible,concrete,transfer,away,You bought Maazina ice cream.,w
+4,2,exp,25,sensible,concrete,transfer,towards,Brittany slid you the cafeteria tray.,w
+4,2,exp,26,sensible,concrete,transfer,away,You handed Marcus the notebook.,w
+4,2,exp,27,sensible,concrete,transfer,towards,Chantelle dealt the cards to you.,w
+4,2,exp,28,sensible,concrete,transfer,away,You forked over the cash to Tyler,w
+4,2,exp,29,sensible,concrete,transfer,towards,Nathaniel donated money to you.,w
+4,2,exp,30,sensible,concrete,transfer,away,You shot Breanna the rubber band.,w
+4,2,exp,41,sensible,abstract,no_transfer,NA,Safiyya talked about pizza with you.,w
+4,2,exp,42,sensible,abstract,no_transfer,NA,You and Leobardo took the lesson.,w
+4,2,exp,43,sensible,abstract,no_transfer,NA,Carla felt honored to be with you.,w
+4,2,exp,44,sensible,abstract,no_transfer,NA,Brian heard the radioed message with you.,w
+4,2,exp,45,sensible,abstract,no_transfer,NA,Annette listened to the message with you.,w
+4,2,exp,46,sensible,abstract,no_transfer,NA,You and Shaafi regarded the problem.,w
+4,2,exp,47,sensible,abstract,no_transfer,NA,Alyssa sang the song with you.,w
+4,2,exp,48,sensible,abstract,no_transfer,NA,Haile thought about your idea.,w
+4,2,exp,49,sensible,abstract,no_transfer,NA,You and Brenna sang a song.,w
+4,2,exp,50,sensible,abstract,no_transfer,NA,Briana watched the tribute with you.,w
+4,2,exp,51,sensible,abstract,no_transfer,NA,You and Christopher discussed some writing tips.,w
+4,2,exp,52,sensible,abstract,no_transfer,NA,You discussed shooting rubber bands with Jesse.,w
+4,2,exp,53,sensible,abstract,no_transfer,NA,You and Daniel shared a secret.,w
+4,2,exp,54,sensible,abstract,no_transfer,NA,You discuss the cash with Damon.,w
+4,2,exp,55,sensible,abstract,no_transfer,NA,You heard the praise with Juan.,w
+4,2,exp,56,sensible,abstract,no_transfer,NA,You complained about Monet.,w
+4,2,exp,57,sensible,abstract,no_transfer,NA,Cody took a chance with you.,w
+4,2,exp,58,sensible,abstract,no_transfer,NA,Jessica ducked responsibility with you.,w
+4,2,exp,59,sensible,abstract,no_transfer,NA,You spent your time around Meaghan.,w
+4,2,exp,60,sensible,abstract,no_transfer,NA,Kabeer read the orders with you.,w
+4,2,exp,81,nonsense,transfer,NA,NA,You barked the football to Jasmine.,s
+4,2,exp,82,nonsense,transfer,NA,NA,You kissed the time to Patrick.,s
+4,2,exp,83,nonsense,transfer,NA,NA,You loafed the coffee cup to Charles.,s
+4,2,exp,84,nonsense,transfer,NA,NA,Andrew cleaned honor upon you.,s
+4,2,exp,85,nonsense,transfer,NA,NA,You held the chance to Derantae.,s
+4,2,exp,86,nonsense,transfer,NA,NA,You harpooned Rafeeq the sheet.,s
+4,2,exp,87,nonsense,transfer,NA,NA,You flew on the note to Jennifer.,s
+4,2,exp,88,nonsense,transfer,NA,NA,Abdur Razzaaq pickled praise on you.,s
+4,2,exp,89,nonsense,transfer,NA,NA,Miguel rolled you adoration.,s
+4,2,exp,90,nonsense,transfer,NA,NA,You perfumed Jose accolades.,s
+4,2,exp,91,nonsense,transfer,NA,NA,You hoarded your love to Prakhar.,s
+4,2,exp,92,nonsense,transfer,NA,NA,You heated Sarah the blame.,s
+4,2,exp,93,nonsense,transfer,NA,NA,You tasted the papers to Michael.,s
+4,2,exp,94,nonsense,transfer,NA,NA,You tickled the orders with Kaitlin.,s
+4,2,exp,95,nonsense,transfer,NA,NA,You swam David the truth.,s
+4,2,exp,96,nonsense,transfer,NA,NA,You blew a car to Breanna.,s
+4,2,exp,97,nonsense,transfer,NA,NA,James festered relief to you.,s
+4,2,exp,98,nonsense,transfer,NA,NA,You glued the story with Deloria.,s
+4,2,exp,99,nonsense,transfer,NA,NA,Nicole washed you the thought.,s
+4,2,exp,100,nonsense,transfer,NA,NA,Maisara medicated commands to you.,s
+4,2,exp,101,nonsense,transfer,NA,NA,Jessica smiled the key to you.,s
+4,2,exp,102,nonsense,transfer,NA,NA,Spencer faltered the obligations to you.,s
+4,2,exp,103,nonsense,transfer,NA,NA,You parked the memo to Mallorie.,s
+4,2,exp,104,nonsense,transfer,NA,NA,You sang the marble with Aseel.,s
+4,2,exp,105,nonsense,transfer,NA,NA,You sneezed Nora secrets.,s
+4,2,exp,106,nonsense,transfer,NA,NA,You cleaned responsibility with Ladaisha.,s
+4,2,exp,107,nonsense,transfer,NA,NA,Brandon tossed you with the paintball.,s
+4,2,exp,108,nonsense,transfer,NA,NA,Michael shambled you loyalty.,s
+4,2,exp,109,nonsense,transfer,NA,NA,Cindy blanketed you the chance.,s
+4,2,exp,110,nonsense,transfer,NA,NA,Caitlin posted you the flowers.,s
+4,2,exp,111,nonsense,transfer,NA,NA,You flexed Alexandra a moment.,s
+4,2,exp,112,nonsense,transfer,NA,NA,You cleaned the honor for Kevin.,s
+4,2,exp,113,nonsense,transfer,NA,NA,You sing the pizza to Fuad.,s
+4,2,exp,114,nonsense,transfer,NA,NA,You ingested the car with Jana.,s
+4,2,exp,115,nonsense,transfer,NA,NA,You snored justice for Jasmine.,s
+4,2,exp,116,nonsense,transfer,NA,NA,You carpeted directions to Sunsiarae.,s
+4,2,exp,117,nonsense,transfer,NA,NA,You cleaned the pizza to Ashley.,s
+4,2,exp,118,nonsense,transfer,NA,NA,You gargled integrity to Rajab.,s
+4,2,exp,119,nonsense,transfer,NA,NA,You mowed Emily your opinion.,s
+4,2,exp,120,nonsense,transfer,NA,NA,Madeline ingested you instructions.,s
+4,2,exp,121,nonsense,transfer,NA,NA,Rasheeqa mingled the complaint to you.,s
+4,2,exp,122,nonsense,transfer,NA,NA,Matthew flew the house with you.,s
+4,2,exp,123,nonsense,transfer,NA,NA,You looted the blanket to Venessa.,s
+4,2,exp,124,nonsense,transfer,NA,NA,Anna droned you the pretzel.,s
+4,2,exp,125,nonsense,transfer,NA,NA,You cried the jack to Ethan.,s
+4,2,exp,126,nonsense,transfer,NA,NA,You harvested Ameri your idea.,s
+4,2,exp,127,nonsense,transfer,NA,NA,You built the water with Ghaaliya.,s
+4,2,exp,128,nonsense,transfer,NA,NA,You swam Brandon the truth.,s
+4,2,exp,129,nonsense,transfer,NA,NA,You smoked the cafeteria tray to Taylor.,s
+4,2,exp,130,nonsense,transfer,NA,NA,Tsehaye pickled the secret to you.,s
+4,2,exp,131,nonsense,transfer,NA,NA,Aabid smelled the money to you.,s
+4,2,exp,132,nonsense,transfer,NA,NA,You pocketed the bike to Ijhanea.,s
+4,2,exp,133,nonsense,transfer,NA,NA,You painted the hammer to Naasiruddeen.,s
+4,2,exp,134,nonsense,transfer,NA,NA,Shane swam the cards with you.,s
+4,2,exp,135,nonsense,transfer,NA,NA,Sundus ate you the poem.,s
+4,2,exp,136,nonsense,transfer,NA,NA,You dove the rubber band with Antquant.,s
+4,2,exp,137,nonsense,transfer,NA,NA,You drank the notebook to Christopher.,s
+4,2,exp,138,nonsense,transfer,NA,NA,You boxed Brandon the keyboard.,s
+4,2,exp,139,nonsense,transfer,NA,NA,Ronnie boiled information to you.,s
+4,2,exp,140,nonsense,transfer,NA,NA,You sang the computer with Wyatt.,s
