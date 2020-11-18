@@ -33,10 +33,10 @@ This is calculated by taking the sum of the TRUE/FALSE values in the correct col
 ```{r make-accuracy-data, message = FALSE}
 accuracy_data <- tidied_data %>% 
   drop_na(correct) %>% 
-  group_by(response_id, congruency) %>% 
+  group_by(response_id, congruency, concreteness) %>% 
   summarise(
     n = n(),
-    mean_correct = sum(correct)
+    mean_correct = sum(as.numeric(correct))
   )
 ```
 
@@ -52,7 +52,7 @@ We could be even smarter here by filtering out any trials where reaction times w
 response_time_data <- tidied_data %>% 
   filter(correct == 1) %>% 
   drop_na(duration) %>% 
-  group_by(response_id, congruency) %>% 
+  group_by(response_id, congruency, concreteness) %>% 
   summarise(
     n = n(),
     mean_rt = mean(duration)

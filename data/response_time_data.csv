@@ -1,3 +1,5 @@
-response_id,congruency,n,mean_correct
-R_3JynOyQinv7BHL1,congruent,10,91.67799999999924
-R_3JynOyQinv7BHL1,incongruent,8,NA
+response_id,congruency,concreteness,n,mean_rt
+R_3fCqQko0KQrT4Wz,congruent,abstract,6,78.033333333328
+R_3fCqQko0KQrT4Wz,congruent,concrete,4,87.03999999999724
+R_3fCqQko0KQrT4Wz,incongruent,abstract,9,71.30888888888876
+R_3fCqQko0KQrT4Wz,incongruent,concrete,4,82.33499999999913

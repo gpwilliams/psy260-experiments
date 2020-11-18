@@ -28,7 +28,7 @@ At the beginning (step 1) we have removed the columns status, distribution_chann
 
 After this (step 2), we have reordered our data so that the participant information comes first as this may be a bit easier to read.
 
-**IMPORTANT:** Please note that some of the column names in the second select function may differ in your study and ours. If you used the guide  and used the exact column names we specify there, this will work. Otherwise, at the point labelled "YOU MAY NEED TO EDIT HERE DOWN", be sure to change any of the column names to represent any variables/columns you added or changed from the guide to create your study.
+**IMPORTANT:** Please note that some of the column names in the second select function may differ in your study and ours. If you used the guide  and used the exact column names we specify there, this will work. Otherwise, at the point labelled "YOU MAY NEED TO EDIT HERE (DOWN)", be sure to change any of the column names to represent any variables/columns you added or changed from the guide to create your study.
 
 ```{r subset-data}
 subsetted_data <- cleaned_data %>% 
@@ -37,6 +37,9 @@ subsetted_data <- cleaned_data %>%
     distribution_channel,
     user_language,
     sender_id,
+    ip_address,
+    sender_type,
+    correct_response_2, # YOU MAY NEED TO EDIT HERE: Remove this if not in your data.
     contains("recipient"),
     contains("meta"),
     contains("location"),
@@ -101,10 +104,6 @@ tidied_data <- filtered_data %>%
   ) %>% 
   filter(congruency %in% c("congruent", "incongruent"))
 ```
-
-# Fixing Some Problems
-
-Lab.js apparently doesn't like it if we give variables the same names across the two phases of the study
 
 # Save Data
 

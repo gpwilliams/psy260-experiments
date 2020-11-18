@@ -74,23 +74,6 @@ cleaned_data <- cleaned_data %>%
   select(-c(q2, q3))
 ```
 
-## Fix Correct Answers
-
-Finally, correct answers weren't properly calculated on the fly in this experiment. That's likely due to loops sharing the same names and hence the same variables throughout the study. Never mind, we can fix this.
-
-To do this, we'll match up when people pressed the key (response) that matched the correct answer. If it matches, we'll give it a 1 (true). Otherwise, if it doesn't match, we'll give it a 0.
-
-```{r fix-correct-answers}
-cleaned_data <- cleaned_data %>% 
-  mutate(
-    correct = case_when(
-      correct_response == "w" & response == "press_w" ~ 1,
-      correct_response == "s" & response == "press_s" ~ 1,
-      TRUE ~ 0
-    )
-  )
-```
-
 # Save Data
 
 Finally we will save our data back to the data folder, now under the name "cleaned_data.csv".
