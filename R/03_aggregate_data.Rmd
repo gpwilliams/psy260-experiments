@@ -7,7 +7,7 @@ We will first install the pacman package if it is not already installed. This ma
 
 # Optionally Install Packages, Load Packages
 
-```{r load-packages}
+```{r load-packages, message = FALSE}
 if(!require("pacman")) {install.packages("pacman")}
 pacman::p_load("tidyverse", "here")
 ```
@@ -22,7 +22,9 @@ tidied_data <- read_csv(here("data", "tidied_data.csv"))
 
 # Make Data Aggregated by Participants
 
-We will make by-participant averages of some measures of performance in the study. To do this, we will take our data and group it by each participant (under the response_id column) and the conditions they are in. Then we will make our averages for each participant.
+We will make by-participant averages of some measures of performance in the study. To do this, we will take our data and group it by each participant (under the `response_id` column) and the conditions they are in. Then we will make our averages for each participant.
+
+**Note:** The response ID column has to be a unique identifier for each participant. This is the case in Qualtrics as it assigns a unique random ID to each participant. Note though that this may not match any IDs you have asked participants to provide e.g. for removing their data after the study. If you need to remove these people from your study, do it in the raw data file or directly in Qualtrics.
 
 ## Accuracy Data
 

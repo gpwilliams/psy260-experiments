@@ -70,6 +70,8 @@ Next, we will filter the data. We will only keep observations from participants 
 
 If we didn't filter out the nonsense sentences and those not involving transfer, then we would get results for data that we don't actually care about. Hopefully you also understand why we only want to keep data from people who finished the experiment and who gave their consent.
 
+**Solving Issues With Qualtrics Progress:** If you had a debrief in Qualtrics where participants have to press a button to end the study, then you also will need to change `finished == TRUE` to something else. Perhaps you want to make this so you only keep participants where they got e.g. 90% through the study. Check the average progress on Qualtrics to see what you should set this to, and change `finished == TRUE` to e.g. `progress >= 90`.
+
 **IMPORTANT:** Again, if any of your variable names or values change, please change the code here to represent what it is that you have in your data. For example, if you changed the name of the sentence screens to "sentences" then this should read `sender == "sentences"`.
 
 ```{r filter-data}
@@ -85,7 +87,7 @@ filtered_data <- subsetted_data %>%
 
 # Make Variables
 
-Finally, we will make the conditions variable for our study. Here, we only care if the direction of movement in the sentence matches the correct response required for a sensible sentence on the keyboard. If it does, we give that the level "congruent". If these things don't match, we give that the condition "incongruent". For anything else (e.g. missing data), we set a default of "NA".
+Next, we will make the conditions variable for our study. Here, we only care if the direction of movement in the sentence matches the correct response required for a sensible sentence on the keyboard. If it does, we give that the level "congruent". If these things don't match, we give that the condition "incongruent". For anything else (e.g. missing data), we set a default of "NA".
 
 Again, if your conditions and labels for the levels don't match that of the guide, then please adapt this code below to track those changes. (e.g. if you called  one of your directions "toward" instead of "towards", then change "towards" in all cases below to read "toward").
 

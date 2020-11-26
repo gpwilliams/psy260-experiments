@@ -1803,101 +1803,55 @@ summary {
 <h1>Optionally Install Packages, Load Packages</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuaWYoIXJlcXVpcmUoXFxwYWNtYW5cXCkpIHtpbnN0YWxsLnBhY2thZ2VzKFxccGFjbWFuXFwpfVxucGFjbWFuOjpwX2xvYWQoXFx0aWR5dmVyc2VcXCwgXFxoZXJlXFwpXG5gYGBcbmBgYCJ9 -->
-<pre class="r"><code>```r
-if(!require(\pacman\)) {install.packages(\pacman\)}
-pacman::p_load(\tidyverse\, \here\)</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-# Load Data
-
-We will load up our tidied data from the data folder just as in 01_clean-data.Rmd and 02_filter-data.Rmd.
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxudGlkaWVkX2RhdGEgPC0gcmVhZF9jc3YoaGVyZShcXGRhdGFcXCwgXFx0aWRpZWRfZGF0YS5jc3ZcXCkpXG5gYGBcbmBgYCJ9 --&gt;
-
-```r
-```r
-tidied_data &lt;- read_csv(here(\data\, \tidied_data.csv\))</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-# Make Data Aggregated by Participants
-
-We will make by-participant averages of some measures of performance in the study. To do this, we will take our data and group it by each participant (under the response_id column) and the conditions they are in. Then we will make our averages for each participant.
-
-## Accuracy Data
-
-Here we will group our data by the participant (response_id) and their conditions (congruency). We will then make a data set which has their response ID in it, a count of how many trials went into their responses, and the number of correct responses they gave. 
-
-This is calculated by taking the sum of the TRUE/FALSE values in the correct column. However, we can&#39;t sum up Boolean (TRUE/FALSE) data, so we first make this numeric. In R, TRUE defaults to 1, and FALSE defaults to 0, so we essentially only sum up all of the correct responses (i.e. how many 1s did we find?).
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuYWNjdXJhY3lfZGF0YSA8LSB0aWRpZWRfZGF0YSAlPiUgXG4gIGRyb3BfbmEoY29ycmVjdCkgJT4lIFxuICBncm91cF9ieShyZXNwb25zZV9pZCwgY29uZ3J1ZW5jeSwgY29uY3JldGVuZXNzKSAlPiUgXG4gIHN1bW1hcmlzZShcbiAgICBuID0gbigpLFxuICAgIG1lYW5fY29ycmVjdCA9IHN1bShhcy5udW1lcmljKGNvcnJlY3QpKVxuICApXG5gYGBcbmBgYCJ9 --&gt;
-
-```r
-```r
-accuracy_data &lt;- tidied_data %&gt;% 
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWYoIXJlcXVpcmUoXCJwYWNtYW5cIikpIHtpbnN0YWxsLnBhY2thZ2VzKFwicGFjbWFuXCIpfVxucGFjbWFuOjpwX2xvYWQoXCJ0aWR5dmVyc2VcIiwgXCJoZXJlXCIpXG5gYGAifQ== -->
+<pre class="r"><code>if(!require(&quot;pacman&quot;)) {install.packages(&quot;pacman&quot;)}
+pacman::p_load(&quot;tidyverse&quot;, &quot;here&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="load-data" class="section level1">
+<h1>Load Data</h1>
+<p>We will load up our tidied data from the data folder just as in 01_clean-data.Rmd and 02_filter-data.Rmd.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGlkaWVkX2RhdGEgPC0gcmVhZF9jc3YoaGVyZShcImRhdGFcIiwgXCJ0aWRpZWRfZGF0YS5jc3ZcIikpXG5gYGAifQ== -->
+<pre class="r"><code>tidied_data &lt;- read_csv(here(&quot;data&quot;, &quot;tidied_data.csv&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="make-data-aggregated-by-participants" class="section level1">
+<h1>Make Data Aggregated by Participants</h1>
+<p>We will make by-participant averages of some measures of performance in the study. To do this, we will take our data and group it by each participant (under the <code>response_id</code> column) and the conditions they are in. Then we will make our averages for each participant.</p>
+<p><strong>Note:</strong> The response ID column has to be a unique identifier for each participant. This is the case in Qualtrics as it assigns a unique random ID to each participant. Note though that this may not match any IDs you have asked participants to provide e.g. for removing their data after the study. If you need to remove these people from your study, do it in the raw data file or directly in Qualtrics.</p>
+<div id="accuracy-data" class="section level2">
+<h2>Accuracy Data</h2>
+<p>Here we will group our data by the participant (response_id) and their conditions (congruency). We will then make a data set which has their response ID in it, a count of how many trials went into their responses, and the number of correct responses they gave.</p>
+<p>This is calculated by taking the sum of the TRUE/FALSE values in the correct column. However, we can’t sum up Boolean (TRUE/FALSE) data, so we first make this numeric. In R, TRUE defaults to 1, and FALSE defaults to 0, so we essentially only sum up all of the correct responses (i.e. how many 1s did we find?).</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYWNjdXJhY3lfZGF0YSA8LSB0aWRpZWRfZGF0YSAlPiUgXG4gIGRyb3BfbmEoY29ycmVjdCkgJT4lIFxuICBncm91cF9ieShyZXNwb25zZV9pZCwgY29uZ3J1ZW5jeSwgY29uY3JldGVuZXNzKSAlPiUgXG4gIHN1bW1hcmlzZShcbiAgICBuID0gbigpLFxuICAgIG1lYW5fY29ycmVjdCA9IHN1bShhcy5udW1lcmljKGNvcnJlY3QpKVxuICApXG5gYGAifQ== -->
+<pre class="r"><code>accuracy_data &lt;- tidied_data %&gt;% 
   drop_na(correct) %&gt;% 
   group_by(response_id, congruency, concreteness) %&gt;% 
   summarise(
     n = n(),
     mean_correct = sum(as.numeric(correct))
   )</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-## Reaction Time Data
-
-Here we will find out how quickly participants responded to trials that were congruent or incongruent in terms of the sentence direction and response direction. 
-
-We will first only keep responses where they got the trial correct. After that, we will group the data by the participant (response_id) and their conditions (congruency). Finally, we will get a count of how many trials they got correct and then take an average (mean) of their duration on that trial. This count of duration stops when a response is made.
-
-We could be even smarter here by filtering out any trials where reaction times were exceptionally long. Imagine we want to remove reaction times that are at or greater than 2000ms (i.e. 2 seconds) long. To do this, just change the filter code to read `filter(correct == TRUE, duration &lt; 2000)`
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxucmVzcG9uc2VfdGltZV9kYXRhIDwtIHRpZGllZF9kYXRhICU+JSBcbiAgZmlsdGVyKGNvcnJlY3QgPT0gMSkgJT4lIFxuICBkcm9wX25hKGR1cmF0aW9uKSAlPiUgXG4gIGdyb3VwX2J5KHJlc3BvbnNlX2lkLCBjb25ncnVlbmN5LCBjb25jcmV0ZW5lc3MpICU+JSBcbiAgc3VtbWFyaXNlKFxuICAgIG4gPSBuKCksXG4gICAgbWVhbl9ydCA9IG1lYW4oZHVyYXRpb24pXG4gIClcbmBgYFxuYGBgIn0= --&gt;
-
-```r
-```r
-response_time_data &lt;- tidied_data %&gt;% 
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="reaction-time-data" class="section level2">
+<h2>Reaction Time Data</h2>
+<p>Here we will find out how quickly participants responded to trials that were congruent or incongruent in terms of the sentence direction and response direction.</p>
+<p>We will first only keep responses where they got the trial correct. After that, we will group the data by the participant (response_id) and their conditions (congruency). Finally, we will get a count of how many trials they got correct and then take an average (mean) of their duration on that trial. This count of duration stops when a response is made.</p>
+<p>We could be even smarter here by filtering out any trials where reaction times were exceptionally long. Imagine we want to remove reaction times that are at or greater than 2000ms (i.e. 2 seconds) long. To do this, just change the filter code to read <code>filter(correct == TRUE, duration &lt; 2000)</code></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucmVzcG9uc2VfdGltZV9kYXRhIDwtIHRpZGllZF9kYXRhICU+JSBcbiAgZmlsdGVyKGNvcnJlY3QgPT0gMSkgJT4lIFxuICBkcm9wX25hKGR1cmF0aW9uKSAlPiUgXG4gIGdyb3VwX2J5KHJlc3BvbnNlX2lkLCBjb25ncnVlbmN5LCBjb25jcmV0ZW5lc3MpICU+JSBcbiAgc3VtbWFyaXNlKFxuICAgIG4gPSBuKCksXG4gICAgbWVhbl9ydCA9IG1lYW4oZHVyYXRpb24pXG4gIClcbmBgYCJ9 -->
+<pre class="r"><code>response_time_data &lt;- tidied_data %&gt;% 
   filter(correct == 1) %&gt;% 
   drop_na(duration) %&gt;% 
   group_by(response_id, congruency, concreteness) %&gt;% 
@@ -1905,40 +1859,26 @@ response_time_data &lt;- tidied_data %&gt;%
     n = n(),
     mean_rt = mean(duration)
   )</code></pre>
-<pre><code>
-&lt;!-- rnb-source-end --&gt;
-
-&lt;!-- rnb-chunk-end --&gt;
-
-
-&lt;!-- rnb-text-begin --&gt;
-
-
-# Save Data
-
-Finally, we will save our two data sets separately in the data folder as accuracy_data.csv and response_time_data.csv. Our data is now ready for analysis using R, JASP, Jamovi, or even SPSS.
-
-
-&lt;!-- rnb-text-end --&gt;
-
-
-&lt;!-- rnb-chunk-begin --&gt;
-
-
-&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxud3JpdGVfY3N2KGFjY3VyYWN5X2RhdGEsIGhlcmUoXFxkYXRhXFwsIFxcYWNjdXJhY3lfZGF0YS5jc3ZcXCkpXG53cml0ZV9jc3YocmVzcG9uc2VfdGltZV9kYXRhLCBoZXJlKFxcZGF0YVxcLCBcXHJlc3BvbnNlX3RpbWVfZGF0YS5jc3ZcXCkpXG5gYGBcbmBgYCJ9 --&gt;
-
-```r
-```r
-write_csv(accuracy_data, here(\data\, \accuracy_data.csv\))
-write_csv(response_time_data, here(\data\, \response_time_data.csv\))</code></pre>
-<p>```</p>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+</div>
+<div id="save-data" class="section level1">
+<h1>Save Data</h1>
+<p>Finally, we will save our two data sets separately in the data folder as accuracy_data.csv and response_time_data.csv. Our data is now ready for analysis using R, JASP, Jamovi, or even SPSS.</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud3JpdGVfY3N2KGFjY3VyYWN5X2RhdGEsIGhlcmUoXCJkYXRhXCIsIFwiYWNjdXJhY3lfZGF0YS5jc3ZcIikpXG53cml0ZV9jc3YocmVzcG9uc2VfdGltZV9kYXRhLCBoZXJlKFwiZGF0YVwiLCBcInJlc3BvbnNlX3RpbWVfZGF0YS5jc3ZcIikpXG5gYGAifQ== -->
+<pre class="r"><code>write_csv(accuracy_data, here(&quot;data&quot;, &quot;accuracy_data.csv&quot;))
+write_csv(response_time_data, here(&quot;data&quot;, &quot;response_time_data.csv&quot;))</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiQWdncmVnYXRlIERhdGEiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCldlIHdpbGwgZmlyc3QgaW5zdGFsbCB0aGUgcGFjbWFuIHBhY2thZ2UgaWYgaXQgaXMgbm90IGFscmVhZHkgaW5zdGFsbGVkLiBUaGlzIG1ha2VzIGxvYWRpbmcgcGFja2FnZXMgZWFzaWVyIHRvIGRvLiBOZXh0LCB3ZSB3aWxsIGxvYWQgdGhlIHRpZHl2ZXJzZSBhbmQgaGVyZSBwYWNrYWdlcyBmb3Igb3VyIGRhdGEgZmlsdGVyaW5nLgoKIyBPcHRpb25hbGx5IEluc3RhbGwgUGFja2FnZXMsIExvYWQgUGFja2FnZXMKCmBgYHtyIGxvYWQtcGFja2FnZXN9CmlmKCFyZXF1aXJlKCJwYWNtYW4iKSkge2luc3RhbGwucGFja2FnZXMoInBhY21hbiIpfQpwYWNtYW46OnBfbG9hZCgidGlkeXZlcnNlIiwgImhlcmUiKQpgYGAKCiMgTG9hZCBEYXRhCgpXZSB3aWxsIGxvYWQgdXAgb3VyIHRpZGllZCBkYXRhIGZyb20gdGhlIGRhdGEgZm9sZGVyIGp1c3QgYXMgaW4gMDFfY2xlYW4tZGF0YS5SbWQgYW5kIDAyX2ZpbHRlci1kYXRhLlJtZC4KCmBgYHtyIG1lc3NhZ2UgPSBGQUxTRX0KdGlkaWVkX2RhdGEgPC0gcmVhZF9jc3YoaGVyZSgiZGF0YSIsICJ0aWRpZWRfZGF0YS5jc3YiKSkKYGBgCgojIE1ha2UgRGF0YSBBZ2dyZWdhdGVkIGJ5IFBhcnRpY2lwYW50cwoKV2Ugd2lsbCBtYWtlIGJ5LXBhcnRpY2lwYW50IGF2ZXJhZ2VzIG9mIHNvbWUgbWVhc3VyZXMgb2YgcGVyZm9ybWFuY2UgaW4gdGhlIHN0dWR5LiBUbyBkbyB0aGlzLCB3ZSB3aWxsIHRha2Ugb3VyIGRhdGEgYW5kIGdyb3VwIGl0IGJ5IGVhY2ggcGFydGljaXBhbnQgKHVuZGVyIHRoZSByZXNwb25zZV9pZCBjb2x1bW4pIGFuZCB0aGUgY29uZGl0aW9ucyB0aGV5IGFyZSBpbi4gVGhlbiB3ZSB3aWxsIG1ha2Ugb3VyIGF2ZXJhZ2VzIGZvciBlYWNoIHBhcnRpY2lwYW50LgoKIyMgQWNjdXJhY3kgRGF0YQoKSGVyZSB3ZSB3aWxsIGdyb3VwIG91ciBkYXRhIGJ5IHRoZSBwYXJ0aWNpcGFudCAocmVzcG9uc2VfaWQpIGFuZCB0aGVpciBjb25kaXRpb25zIChjb25ncnVlbmN5KS4gV2Ugd2lsbCB0aGVuIG1ha2UgYSBkYXRhIHNldCB3aGljaCBoYXMgdGhlaXIgcmVzcG9uc2UgSUQgaW4gaXQsIGEgY291bnQgb2YgaG93IG1hbnkgdHJpYWxzIHdlbnQgaW50byB0aGVpciByZXNwb25zZXMsIGFuZCB0aGUgbnVtYmVyIG9mIGNvcnJlY3QgcmVzcG9uc2VzIHRoZXkgZ2F2ZS4gCgpUaGlzIGlzIGNhbGN1bGF0ZWQgYnkgdGFraW5nIHRoZSBzdW0gb2YgdGhlIFRSVUUvRkFMU0UgdmFsdWVzIGluIHRoZSBjb3JyZWN0IGNvbHVtbi4gSG93ZXZlciwgd2UgY2FuJ3Qgc3VtIHVwIEJvb2xlYW4gKFRSVUUvRkFMU0UpIGRhdGEsIHNvIHdlIGZpcnN0IG1ha2UgdGhpcyBudW1lcmljLiBJbiBSLCBUUlVFIGRlZmF1bHRzIHRvIDEsIGFuZCBGQUxTRSBkZWZhdWx0cyB0byAwLCBzbyB3ZSBlc3NlbnRpYWxseSBvbmx5IHN1bSB1cCBhbGwgb2YgdGhlIGNvcnJlY3QgcmVzcG9uc2VzIChpLmUuIGhvdyBtYW55IDFzIGRpZCB3ZSBmaW5kPykuCgpgYGB7ciBtYWtlLWFjY3VyYWN5LWRhdGEsIG1lc3NhZ2UgPSBGQUxTRX0KYWNjdXJhY3lfZGF0YSA8LSB0aWRpZWRfZGF0YSAlPiUgCiAgZHJvcF9uYShjb3JyZWN0KSAlPiUgCiAgZ3JvdXBfYnkocmVzcG9uc2VfaWQsIGNvbmdydWVuY3ksIGNvbmNyZXRlbmVzcykgJT4lIAogIHN1bW1hcmlzZSgKICAgIG4gPSBuKCksCiAgICBtZWFuX2NvcnJlY3QgPSBzdW0oYXMubnVtZXJpYyhjb3JyZWN0KSkKICApCmBgYAoKIyMgUmVhY3Rpb24gVGltZSBEYXRhCgpIZXJlIHdlIHdpbGwgZmluZCBvdXQgaG93IHF1aWNrbHkgcGFydGljaXBhbnRzIHJlc3BvbmRlZCB0byB0cmlhbHMgdGhhdCB3ZXJlIGNvbmdydWVudCBvciBpbmNvbmdydWVudCBpbiB0ZXJtcyBvZiB0aGUgc2VudGVuY2UgZGlyZWN0aW9uIGFuZCByZXNwb25zZSBkaXJlY3Rpb24uIAoKV2Ugd2lsbCBmaXJzdCBvbmx5IGtlZXAgcmVzcG9uc2VzIHdoZXJlIHRoZXkgZ290IHRoZSB0cmlhbCBjb3JyZWN0LiBBZnRlciB0aGF0LCB3ZSB3aWxsIGdyb3VwIHRoZSBkYXRhIGJ5IHRoZSBwYXJ0aWNpcGFudCAocmVzcG9uc2VfaWQpIGFuZCB0aGVpciBjb25kaXRpb25zIChjb25ncnVlbmN5KS4gRmluYWxseSwgd2Ugd2lsbCBnZXQgYSBjb3VudCBvZiBob3cgbWFueSB0cmlhbHMgdGhleSBnb3QgY29ycmVjdCBhbmQgdGhlbiB0YWtlIGFuIGF2ZXJhZ2UgKG1lYW4pIG9mIHRoZWlyIGR1cmF0aW9uIG9uIHRoYXQgdHJpYWwuIFRoaXMgY291bnQgb2YgZHVyYXRpb24gc3RvcHMgd2hlbiBhIHJlc3BvbnNlIGlzIG1hZGUuCgpXZSBjb3VsZCBiZSBldmVuIHNtYXJ0ZXIgaGVyZSBieSBmaWx0ZXJpbmcgb3V0IGFueSB0cmlhbHMgd2hlcmUgcmVhY3Rpb24gdGltZXMgd2VyZSBleGNlcHRpb25hbGx5IGxvbmcuIEltYWdpbmUgd2Ugd2FudCB0byByZW1vdmUgcmVhY3Rpb24gdGltZXMgdGhhdCBhcmUgYXQgb3IgZ3JlYXRlciB0aGFuIDIwMDBtcyAoaS5lLiAyIHNlY29uZHMpIGxvbmcuIFRvIGRvIHRoaXMsIGp1c3QgY2hhbmdlIHRoZSBmaWx0ZXIgY29kZSB0byByZWFkIGBmaWx0ZXIoY29ycmVjdCA9PSBUUlVFLCBkdXJhdGlvbiA8IDIwMDApYAoKYGBge3IgbWFrZS1ydC1kYXRhLCBtZXNzYWdlID0gRkFMU0V9CnJlc3BvbnNlX3RpbWVfZGF0YSA8LSB0aWRpZWRfZGF0YSAlPiUgCiAgZmlsdGVyKGNvcnJlY3QgPT0gMSkgJT4lIAogIGRyb3BfbmEoZHVyYXRpb24pICU+JSAKICBncm91cF9ieShyZXNwb25zZV9pZCwgY29uZ3J1ZW5jeSwgY29uY3JldGVuZXNzKSAlPiUgCiAgc3VtbWFyaXNlKAogICAgbiA9IG4oKSwKICAgIG1lYW5fcnQgPSBtZWFuKGR1cmF0aW9uKQogICkKYGBgCgojIFNhdmUgRGF0YQoKRmluYWxseSwgd2Ugd2lsbCBzYXZlIG91ciB0d28gZGF0YSBzZXRzIHNlcGFyYXRlbHkgaW4gdGhlIGRhdGEgZm9sZGVyIGFzIGFjY3VyYWN5X2RhdGEuY3N2IGFuZCByZXNwb25zZV90aW1lX2RhdGEuY3N2LiBPdXIgZGF0YSBpcyBub3cgcmVhZHkgZm9yIGFuYWx5c2lzIHVzaW5nIFIsIEpBU1AsIEphbW92aSwgb3IgZXZlbiBTUFNTLgoKYGBge3Igc2F2ZS1zdW1tYXJpZXN9CndyaXRlX2NzdihhY2N1cmFjeV9kYXRhLCBoZXJlKCJkYXRhIiwgImFjY3VyYWN5X2RhdGEuY3N2IikpCndyaXRlX2NzdihyZXNwb25zZV90aW1lX2RhdGEsIGhlcmUoImRhdGEiLCAicmVzcG9uc2VfdGltZV9kYXRhLmNzdiIpKQpgYGAKCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiQWdncmVnYXRlIERhdGEiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCldlIHdpbGwgZmlyc3QgaW5zdGFsbCB0aGUgcGFjbWFuIHBhY2thZ2UgaWYgaXQgaXMgbm90IGFscmVhZHkgaW5zdGFsbGVkLiBUaGlzIG1ha2VzIGxvYWRpbmcgcGFja2FnZXMgZWFzaWVyIHRvIGRvLiBOZXh0LCB3ZSB3aWxsIGxvYWQgdGhlIHRpZHl2ZXJzZSBhbmQgaGVyZSBwYWNrYWdlcyBmb3Igb3VyIGRhdGEgZmlsdGVyaW5nLgoKIyBPcHRpb25hbGx5IEluc3RhbGwgUGFja2FnZXMsIExvYWQgUGFja2FnZXMKCmBgYHtyIGxvYWQtcGFja2FnZXMsIG1lc3NhZ2UgPSBGQUxTRX0KaWYoIXJlcXVpcmUoInBhY21hbiIpKSB7aW5zdGFsbC5wYWNrYWdlcygicGFjbWFuIil9CnBhY21hbjo6cF9sb2FkKCJ0aWR5dmVyc2UiLCAiaGVyZSIpCmBgYAoKIyBMb2FkIERhdGEKCldlIHdpbGwgbG9hZCB1cCBvdXIgdGlkaWVkIGRhdGEgZnJvbSB0aGUgZGF0YSBmb2xkZXIganVzdCBhcyBpbiAwMV9jbGVhbi1kYXRhLlJtZCBhbmQgMDJfZmlsdGVyLWRhdGEuUm1kLgoKYGBge3IgbWVzc2FnZSA9IEZBTFNFfQp0aWRpZWRfZGF0YSA8LSByZWFkX2NzdihoZXJlKCJkYXRhIiwgInRpZGllZF9kYXRhLmNzdiIpKQpgYGAKCiMgTWFrZSBEYXRhIEFnZ3JlZ2F0ZWQgYnkgUGFydGljaXBhbnRzCgpXZSB3aWxsIG1ha2UgYnktcGFydGljaXBhbnQgYXZlcmFnZXMgb2Ygc29tZSBtZWFzdXJlcyBvZiBwZXJmb3JtYW5jZSBpbiB0aGUgc3R1ZHkuIFRvIGRvIHRoaXMsIHdlIHdpbGwgdGFrZSBvdXIgZGF0YSBhbmQgZ3JvdXAgaXQgYnkgZWFjaCBwYXJ0aWNpcGFudCAodW5kZXIgdGhlIGByZXNwb25zZV9pZGAgY29sdW1uKSBhbmQgdGhlIGNvbmRpdGlvbnMgdGhleSBhcmUgaW4uIFRoZW4gd2Ugd2lsbCBtYWtlIG91ciBhdmVyYWdlcyBmb3IgZWFjaCBwYXJ0aWNpcGFudC4KCioqTm90ZToqKiBUaGUgcmVzcG9uc2UgSUQgY29sdW1uIGhhcyB0byBiZSBhIHVuaXF1ZSBpZGVudGlmaWVyIGZvciBlYWNoIHBhcnRpY2lwYW50LiBUaGlzIGlzIHRoZSBjYXNlIGluIFF1YWx0cmljcyBhcyBpdCBhc3NpZ25zIGEgdW5pcXVlIHJhbmRvbSBJRCB0byBlYWNoIHBhcnRpY2lwYW50LiBOb3RlIHRob3VnaCB0aGF0IHRoaXMgbWF5IG5vdCBtYXRjaCBhbnkgSURzIHlvdSBoYXZlIGFza2VkIHBhcnRpY2lwYW50cyB0byBwcm92aWRlIGUuZy4gZm9yIHJlbW92aW5nIHRoZWlyIGRhdGEgYWZ0ZXIgdGhlIHN0dWR5LiBJZiB5b3UgbmVlZCB0byByZW1vdmUgdGhlc2UgcGVvcGxlIGZyb20geW91ciBzdHVkeSwgZG8gaXQgaW4gdGhlIHJhdyBkYXRhIGZpbGUgb3IgZGlyZWN0bHkgaW4gUXVhbHRyaWNzLgoKIyMgQWNjdXJhY3kgRGF0YQoKSGVyZSB3ZSB3aWxsIGdyb3VwIG91ciBkYXRhIGJ5IHRoZSBwYXJ0aWNpcGFudCAocmVzcG9uc2VfaWQpIGFuZCB0aGVpciBjb25kaXRpb25zIChjb25ncnVlbmN5KS4gV2Ugd2lsbCB0aGVuIG1ha2UgYSBkYXRhIHNldCB3aGljaCBoYXMgdGhlaXIgcmVzcG9uc2UgSUQgaW4gaXQsIGEgY291bnQgb2YgaG93IG1hbnkgdHJpYWxzIHdlbnQgaW50byB0aGVpciByZXNwb25zZXMsIGFuZCB0aGUgbnVtYmVyIG9mIGNvcnJlY3QgcmVzcG9uc2VzIHRoZXkgZ2F2ZS4gCgpUaGlzIGlzIGNhbGN1bGF0ZWQgYnkgdGFraW5nIHRoZSBzdW0gb2YgdGhlIFRSVUUvRkFMU0UgdmFsdWVzIGluIHRoZSBjb3JyZWN0IGNvbHVtbi4gSG93ZXZlciwgd2UgY2FuJ3Qgc3VtIHVwIEJvb2xlYW4gKFRSVUUvRkFMU0UpIGRhdGEsIHNvIHdlIGZpcnN0IG1ha2UgdGhpcyBudW1lcmljLiBJbiBSLCBUUlVFIGRlZmF1bHRzIHRvIDEsIGFuZCBGQUxTRSBkZWZhdWx0cyB0byAwLCBzbyB3ZSBlc3NlbnRpYWxseSBvbmx5IHN1bSB1cCBhbGwgb2YgdGhlIGNvcnJlY3QgcmVzcG9uc2VzIChpLmUuIGhvdyBtYW55IDFzIGRpZCB3ZSBmaW5kPykuCgpgYGB7ciBtYWtlLWFjY3VyYWN5LWRhdGEsIG1lc3NhZ2UgPSBGQUxTRX0KYWNjdXJhY3lfZGF0YSA8LSB0aWRpZWRfZGF0YSAlPiUgCiAgZHJvcF9uYShjb3JyZWN0KSAlPiUgCiAgZ3JvdXBfYnkocmVzcG9uc2VfaWQsIGNvbmdydWVuY3ksIGNvbmNyZXRlbmVzcykgJT4lIAogIHN1bW1hcmlzZSgKICAgIG4gPSBuKCksCiAgICBtZWFuX2NvcnJlY3QgPSBzdW0oYXMubnVtZXJpYyhjb3JyZWN0KSkKICApCmBgYAoKIyMgUmVhY3Rpb24gVGltZSBEYXRhCgpIZXJlIHdlIHdpbGwgZmluZCBvdXQgaG93IHF1aWNrbHkgcGFydGljaXBhbnRzIHJlc3BvbmRlZCB0byB0cmlhbHMgdGhhdCB3ZXJlIGNvbmdydWVudCBvciBpbmNvbmdydWVudCBpbiB0ZXJtcyBvZiB0aGUgc2VudGVuY2UgZGlyZWN0aW9uIGFuZCByZXNwb25zZSBkaXJlY3Rpb24uIAoKV2Ugd2lsbCBmaXJzdCBvbmx5IGtlZXAgcmVzcG9uc2VzIHdoZXJlIHRoZXkgZ290IHRoZSB0cmlhbCBjb3JyZWN0LiBBZnRlciB0aGF0LCB3ZSB3aWxsIGdyb3VwIHRoZSBkYXRhIGJ5IHRoZSBwYXJ0aWNpcGFudCAocmVzcG9uc2VfaWQpIGFuZCB0aGVpciBjb25kaXRpb25zIChjb25ncnVlbmN5KS4gRmluYWxseSwgd2Ugd2lsbCBnZXQgYSBjb3VudCBvZiBob3cgbWFueSB0cmlhbHMgdGhleSBnb3QgY29ycmVjdCBhbmQgdGhlbiB0YWtlIGFuIGF2ZXJhZ2UgKG1lYW4pIG9mIHRoZWlyIGR1cmF0aW9uIG9uIHRoYXQgdHJpYWwuIFRoaXMgY291bnQgb2YgZHVyYXRpb24gc3RvcHMgd2hlbiBhIHJlc3BvbnNlIGlzIG1hZGUuCgpXZSBjb3VsZCBiZSBldmVuIHNtYXJ0ZXIgaGVyZSBieSBmaWx0ZXJpbmcgb3V0IGFueSB0cmlhbHMgd2hlcmUgcmVhY3Rpb24gdGltZXMgd2VyZSBleGNlcHRpb25hbGx5IGxvbmcuIEltYWdpbmUgd2Ugd2FudCB0byByZW1vdmUgcmVhY3Rpb24gdGltZXMgdGhhdCBhcmUgYXQgb3IgZ3JlYXRlciB0aGFuIDIwMDBtcyAoaS5lLiAyIHNlY29uZHMpIGxvbmcuIFRvIGRvIHRoaXMsIGp1c3QgY2hhbmdlIHRoZSBmaWx0ZXIgY29kZSB0byByZWFkIGBmaWx0ZXIoY29ycmVjdCA9PSBUUlVFLCBkdXJhdGlvbiA8IDIwMDApYAoKYGBge3IgbWFrZS1ydC1kYXRhLCBtZXNzYWdlID0gRkFMU0V9CnJlc3BvbnNlX3RpbWVfZGF0YSA8LSB0aWRpZWRfZGF0YSAlPiUgCiAgZmlsdGVyKGNvcnJlY3QgPT0gMSkgJT4lIAogIGRyb3BfbmEoZHVyYXRpb24pICU+JSAKICBncm91cF9ieShyZXNwb25zZV9pZCwgY29uZ3J1ZW5jeSwgY29uY3JldGVuZXNzKSAlPiUgCiAgc3VtbWFyaXNlKAogICAgbiA9IG4oKSwKICAgIG1lYW5fcnQgPSBtZWFuKGR1cmF0aW9uKQogICkKYGBgCgojIFNhdmUgRGF0YQoKRmluYWxseSwgd2Ugd2lsbCBzYXZlIG91ciB0d28gZGF0YSBzZXRzIHNlcGFyYXRlbHkgaW4gdGhlIGRhdGEgZm9sZGVyIGFzIGFjY3VyYWN5X2RhdGEuY3N2IGFuZCByZXNwb25zZV90aW1lX2RhdGEuY3N2LiBPdXIgZGF0YSBpcyBub3cgcmVhZHkgZm9yIGFuYWx5c2lzIHVzaW5nIFIsIEpBU1AsIEphbW92aSwgb3IgZXZlbiBTUFNTLgoKYGBge3Igc2F2ZS1zdW1tYXJpZXN9CndyaXRlX2NzdihhY2N1cmFjeV9kYXRhLCBoZXJlKCJkYXRhIiwgImFjY3VyYWN5X2RhdGEuY3N2IikpCndyaXRlX2NzdihyZXNwb25zZV90aW1lX2RhdGEsIGhlcmUoImRhdGEiLCAicmVzcG9uc2VfdGltZV9kYXRhLmNzdiIpKQpgYGAKCg==</div>
 
 
 
