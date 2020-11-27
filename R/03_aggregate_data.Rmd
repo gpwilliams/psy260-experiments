@@ -38,7 +38,7 @@ accuracy_data <- tidied_data %>%
   group_by(response_id, congruency, concreteness) %>% 
   summarise(
     n = n(),
-    mean_correct = sum(as.numeric(correct))
+    sum_correct = sum(as.numeric(correct))
   )
 ```
 
@@ -52,7 +52,7 @@ We could be even smarter here by filtering out any trials where reaction times w
 
 ```{r make-rt-data, message = FALSE}
 response_time_data <- tidied_data %>% 
-  filter(correct == 1) %>% 
+  filter(correct == TRUE) %>% 
   drop_na(duration) %>% 
   group_by(response_id, congruency, concreteness) %>% 
   summarise(

@@ -1,4 +1,4 @@
-response_id,congruency,concreteness,n,mean_correct
+response_id,congruency,concreteness,n,sum_correct
 R_3fCqQko0KQrT4Wz,congruent,abstract,10,6
 R_3fCqQko0KQrT4Wz,congruent,concrete,10,4
 R_3fCqQko0KQrT4Wz,incongruent,abstract,10,9
